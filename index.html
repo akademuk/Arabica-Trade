@@ -9,6 +9,7 @@
     <title>ArabicaTrade</title>
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="preload" as="image" href="images/hero-img1-800.webp" type="image/webp">
     <link rel="stylesheet" href="styles/aos.css">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/general.css">
@@ -17,6 +18,11 @@
 
     <style>
         /* Hero */
+        .hero__background-img {
+            aspect-ratio: 1580 / 730;
+            overflow: hidden;
+        }
+
         .hero {
             padding: 10px 10px 0 10px;
             width: 100%;
@@ -211,18 +217,32 @@
             <div class="hero__background">
                 <div class="hero__background-img">
                     <picture>
-                        <source srcset="
+                        <source 
+                            srcset="
                                 images/hero-img1-400.webp 400w,
                                 images/hero-img1-800.webp 800w,
                                 images/hero-img1-1580.webp 1580w
-                            " type="image/webp">
-                        <source srcset="
+                            "
+                            sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1580px"
+                            type="image/webp"
+                        >
+                        <source 
+                            srcset="
                                 images/hero-img1-400.jpg 400w,
                                 images/hero-img1-800.jpg 800w,
                                 images/hero-img1-1580.jpg 1580w
-                            " type="image/jpeg">
-                        <img src="images/hero-img1.jpg" alt="Hero image" width="1580" height="730" loading="eager"
-                            decoding="async">
+                            "
+                            sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1580px"
+                            type="image/jpeg"
+                        >
+                        <img 
+                            src="images/hero-img1.jpg" 
+                            alt="Hero image" 
+                            width="1580" 
+                            height="730" 
+                            loading="eager" 
+                            decoding="async"
+                        >
                     </picture>
                 </div>
 
