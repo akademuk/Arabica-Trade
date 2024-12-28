@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  initHeroVideo();
+//   initHeroVideo();
   initBurgerMenu();
   initSubmenuToggle();
   initHeaderScroll();
@@ -10,20 +10,20 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeAccordion('.footer__accordion');
 });
 
-function initHeroVideo() {
-  const heroBackground = document.querySelector(".hero__background");
-  const heroImage = heroBackground.querySelector(".hero__background-img");
-  const heroVideo = heroBackground.querySelector(".hero__background-video");
+// function initHeroVideo() {
+//   const heroBackground = document.querySelector(".hero__background");
+//   const heroImage = heroBackground.querySelector(".hero__background-img");
+//   const heroVideo = heroBackground.querySelector(".hero__background-video");
 
-  if (!heroImage || !heroVideo) {
-      return;
-  }
+//   if (!heroImage || !heroVideo) {
+//       return;
+//   }
 
-  window.addEventListener("load", () => {
-      heroImage.style.opacity = "0";
-      heroVideo.style.opacity = "1";
-  });
-}
+//   window.addEventListener("load", () => {
+//       heroImage.style.opacity = "0";
+//       heroVideo.style.opacity = "1";
+//   });
+// }
 
 function initBurgerMenu() {
     const burger = document.querySelector(".header__burger");
