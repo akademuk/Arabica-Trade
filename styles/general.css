@@ -148,6 +148,13 @@ body.modal-open {
    transition: all 0.4s;
 }
 
+.header__language-style {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    display: block;
+}
+
 .header .wrapper {
     max-width: 1170px;
     width: 100%;
