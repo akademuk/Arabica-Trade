@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="description" content="Arabica Trade">
 
     <title>ArabicaTrade</title>
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/swiper-bundle.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preload" href="images/hero-img1-800.webp" as="image" type="image/webp" />
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/home.css">
@@ -67,6 +68,7 @@
                     <span class="header__value">0</span>
                 </a>
                 <div class="header__language">
+                    <label for="languageSelect" style="opacity: 0;">Choose your language:</label>
                     <select id="languageSelect" class="header__select">
                         <option value="en">En</option>
                         <option value="fr">Fr</option>
@@ -87,33 +89,21 @@
             <div class="hero__background">
                 <div class="hero__background-img">
                     <picture>
-                        <source
-                            srcset="
+                        <source srcset="
                                 images/hero-img1-400.webp 400w,
                                 images/hero-img1-800.webp 800w,
                                 images/hero-img1-1580.webp 1580w
-                            "
-                            type="image/webp"
-                        >
-                        <source
-                            srcset="
+                            " type="image/webp">
+                        <source srcset="
                                 images/hero-img1-400.jpg 400w,
                                 images/hero-img1-800.jpg 800w,
                                 images/hero-img1-1580.jpg 1580w
-                            "
-                            type="image/jpeg"
-                        >
-                        <img
-                            src="images/hero-img1.jpg"
-                            alt="Hero image"
-                            width="1580"
-                            height="730"
-                            loading="eager"
-                            decoding="async"
-                        >
+                            " type="image/jpeg">
+                        <img src="images/hero-img1.jpg" alt="Hero image" width="1580" height="730" loading="eager"
+                            decoding="async">
                     </picture>
                 </div>
-                
+
                 <!-- <div class="hero__background-video">
                     <iframe width="1580" height="730"
                         src="https://www.youtube-nocookie.com/embed/JmsLEmwmfEY?autoplay=1&mute=1&loop=1&playlist=JmsLEmwmfEY&controls=0&showinfo=0&rel=0"
@@ -753,7 +743,7 @@
                         </defs>
                     </svg>
                     <div class="coffee-origins__location coffee-origins__location1">
-                        <h5 class="coffee-origins__location-title">brasil</h5>
+                        <h4 class="coffee-origins__location-title">brasil</h4>
                         <ul class="coffee-origins__location-list">
                             <li>
                                 <img width="12" height="12" src="images/location-icon1.svg" alt="icons">
@@ -775,7 +765,7 @@
                         </p>
                     </div>
                     <div class="coffee-origins__location coffee-origins__location2">
-                        <h5 class="coffee-origins__location-title">brasil2</h5>
+                        <h4 class="coffee-origins__location-title">brasil2</h4>
                         <ul class="coffee-origins__location-list">
                             <li>
                                 <img width="12" height="12" src="images/location-icon1.svg" alt="icons">
@@ -924,7 +914,8 @@
                     <div class="order__accordion">
                         <div class="order__accordion-item active">
                             <div class="order__accordion-header">
-                                <img class="order__accordion-header-img" width="41" height="32" src="images/number1.svg" alt="1">
+                                <img class="order__accordion-header-img" width="41" height="32" src="images/number1.svg"
+                                    alt="1">
                                 <h4 class="order__accordion-title">Request an offer</h4>
                                 <span class="order__accordion-arrow">
                                     <img width="14" height="6" src="images/accardion-arrow.svg" alt="arrow">
@@ -945,7 +936,8 @@
                         </div>
                         <div class="order__accordion-item">
                             <div class="order__accordion-header">
-                                <img class="order__accordion-header-img" width="41" height="32" src="images/number2.svg" alt="2">
+                                <img class="order__accordion-header-img" width="41" height="32" src="images/number2.svg"
+                                    alt="2">
                                 <h4 class="order__accordion-title">
                                     Our team will send you the price offer
                                 </h4>
@@ -968,7 +960,8 @@
                         </div>
                         <div class="order__accordion-item">
                             <div class="order__accordion-header">
-                                <img class="order__accordion-header-img" width="41" height="32" src="images/number3.svg" alt="3">
+                                <img class="order__accordion-header-img" width="41" height="32" src="images/number3.svg"
+                                    alt="3">
                                 <h4 class="order__accordion-title">
                                     Review our proposal. Questions? Please call us
                                 </h4>
@@ -991,7 +984,8 @@
                         </div>
                         <div class="order__accordion-item">
                             <div class="order__accordion-header">
-                                <img class="order__accordion-header-img" width="41" height="32" src="images/number4.svg" alt="4">
+                                <img class="order__accordion-header-img" width="41" height="32" src="images/number4.svg"
+                                    alt="4">
                                 <h4 class="order__accordion-title">
                                     After confirmation we will prepare your order
                                 </h4>
@@ -1014,7 +1008,8 @@
                         </div>
                         <div class="order__accordion-item">
                             <div class="order__accordion-header">
-                                <img class="order__accordion-header-img" width="41" height="32" src="images/number5.svg" alt="5">
+                                <img class="order__accordion-header-img" width="41" height="32" src="images/number5.svg"
+                                    alt="5">
                                 <h4 class="order__accordion-title">
                                     The coffee is ready for you!
                                 </h4>
@@ -1037,20 +1032,23 @@
                         </div>
                     </div>
 
-                    <div class="order__form"  data-aos="fade-up">
+                    <div class="order__form" data-aos="fade-up">
                         <h3>Get in touch</h3>
                         <form class="send-form" method="post" style="width: 100%">
                             <div class="col-4 p-15-all p-0 order__form-box">
                                 <label for="name" class="inputs-n1">Name & Surname</label>
-                                <input class="inputs-field" type="text" name="name" id="name" autocomplete="on" required>
+                                <input class="inputs-field" type="text" name="name" id="name" autocomplete="on"
+                                    required>
                             </div>
                             <div class="col-4 p-15-all p-0 order__form-box">
                                 <label for="businessname" class="inputs-n1">Business name</label>
-                                <input class="inputs-field" type="text" name="businessname" id="businessname" autocomplete="on" required>
+                                <input class="inputs-field" type="text" name="businessname" id="businessname"
+                                    autocomplete="on" required>
                             </div>
                             <div class="col-4 p-15-all media-phone p-0 order__form-box">
                                 <label for="email" class="inputs-n1">Email</label>
-                                <input class="inputs-field email" type="email" name="email" id="email" autocomplete="off" required>
+                                <input class="inputs-field email" type="email" name="email" id="email"
+                                    autocomplete="off" required>
                                 <span class="valid-area-e"></span>
                             </div>
                             <div class="col-4 p-15-all media-phone p-0 order__form-box">
@@ -1060,7 +1058,8 @@
                             </div>
                             <div class="col-4 p-15-all p-0 order__form-box">
                                 <label for="selected" class="inputs-n1">Not selected</label>
-                                <input class="inputs-field" type="text" name="selected" id="selected" autocomplete="on" required>
+                                <input class="inputs-field" type="text" name="selected" id="selected" autocomplete="on"
+                                    required>
                             </div>
                             <div class="col-12 p-15-all p-0 order__form-box order__form-textarea">
                                 <label for="message" class="inputs-n1">Your message</label>
@@ -1069,7 +1068,7 @@
                             <div class="col-12 col-md-4 p-15-all p-0">
                                 <button class="submit-form">Send</button>
                             </div>
-                        </form>                        
+                        </form>
                     </div>
                 </div>
             </div>
@@ -1148,48 +1147,30 @@
                     <p class="banner-form__text">Once a week we send a digest with the most popular articles</p>
                     <div class="col-4 p-15-all media-phone p-0 order__form-box">
                         <label for="email" class="visually-hidden">Email Address*</label>
-                        <input
-                            class="inputs-field email"
-                            id="email"
-                            name="email"
-                            autocomplete="off"
-                            required
-                            placeholder="Email*"
-                        >
+                        <input class="inputs-field email" id="email" name="email" autocomplete="off" required
+                            placeholder="Email*">
                         <span class="valid-area-e"></span>
                     </div>
                     <div class="col-12 col-md-4 p-15-all p-0">
                         <button class="submit-form button-style">Subscribe</button>
                     </div>
                 </form>
-                
+
             </div>
             <div class="banner-form__img">
                 <picture>
-                    <source
-                        srcset="
+                    <source srcset="
                             images/hero-img1-400.webp 400w,
                             images/hero-img1-800.webp 800w,
                             images/hero-img1-1580.webp 1580w
-                        "
-                        type="image/webp"
-                    >
-                    <source
-                        srcset="
+                        " type="image/webp">
+                    <source srcset="
                             images/hero-img1-400.jpg 400w,
                             images/hero-img1-800.jpg 800w,
                             images/hero-img1-1580.jpg 1580w
-                        "
-                        type="image/jpeg"
-                    >
-                    <img
-                        src="images/hero-img1.jpg"
-                        alt="Hero image"
-                        width="1580"
-                        height="730"
-                        loading="eager"
-                        decoding="async"
-                    >
+                        " type="image/jpeg">
+                    <img src="images/hero-img1.jpg" alt="Hero image" width="1580" height="730" loading="eager"
+                        decoding="async">
                 </picture>
             </div>
         </section>
@@ -1330,9 +1311,10 @@
                 <span class="header__value">0</span>
             </a>
             <div class="header__language">
+                <label for="languageSelect2" style="opacity: 0;">Choose your language:</label>
                 <select id="languageSelect2" class="header__select">
-                    <option value="en">En</option>
-                    <option value="fr">Fr</option>
+                  <option value="en">English</option>
+                  <option value="fr">French</option>
                 </select>
             </div>
         </div>
@@ -1346,10 +1328,10 @@
     <script>
         AOS.init({
             duration: 1000, // Увеличиваем длительность для более медленного появления
-    easing: 'ease-in-out', // Более плавный тип easing
-    once: false,  // Анимация воспроизводится каждый раз при появлении элемента
-    mirror: true, // Анимация работает при скролле вверх
-    });
+            easing: 'ease-in-out', // Более плавный тип easing
+            once: false,  // Анимация воспроизводится каждый раз при появлении элемента
+            mirror: true, // Анимация работает при скролле вверх
+        });
     </script>
 </body>
 
