@@ -12,8 +12,8 @@
     <link rel="preload" as="image" href="images/hero-img1-800.webp" type="image/webp">
     <link rel="stylesheet" href="styles/aos.css">
     <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/general.min.css">
-    <link rel="stylesheet" href="styles/home.mim.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/home.css">
 
 
     <style>
@@ -107,6 +107,15 @@
 
         .hero__background-video {
             opacity: 0;
+        }
+
+        .hero__background-video iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 177.77vh;
+            height: 100vh;
+            transform: translate(-50%, -50%);
         }
 
         @media (max-width: 1200px)  {
@@ -213,7 +222,7 @@
     <!-- Main content -->
     <main>
         <!-- Hero -->
-        <section class="hero">
+        <section class="hero" id="hero">
             <div class="hero__background">
                 <div class="hero__background-img">
                     <picture>
@@ -244,12 +253,14 @@
                     </picture>
                 </div>
 
-                <!-- <div class="hero__background-video">
-                    <iframe width="1580" height="730"
-                        src="https://www.youtube-nocookie.com/embed/JmsLEmwmfEY?autoplay=1&mute=1&loop=1&playlist=JmsLEmwmfEY&controls=0&showinfo=0&rel=0"
-                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-                    </iframe>
-                </div> -->
+                <div class="hero__background-video">
+                    <iframe
+                        src="https://www.youtube-nocookie.com/embed/vuHIIb1nrkA?autoplay=1&modestbranding=1&playsinline=1&showinfo=0&rel=0&controls=0&color=white&loop=1&mute=1&playlist=vuHIIb1nrkA&enablejsapi=1"
+                        frameborder="0"
+                        allow="autoplay; encrypted-media"
+                        allowfullscreen>
+                    </iframe>         
+                </div>
             </div>
             <div class="wrapper">
                 <div class="hero__content hero__content-home" data-aos="fade-up">
@@ -264,7 +275,7 @@
         </section>
 
         <!-- We offer -->
-        <section class="we-offer">
+        <section class="we-offer" id="weOffer">
             <div class="wrapper">
                 <h2 class="heading-secondary">we offer</h2>
 
@@ -321,7 +332,7 @@
         </section>
 
         <!-- Coffee origins -->
-        <section class="coffee-origins">
+        <section class="coffee-origins" id="coffeeOrigins">
             <div class="wrapper">
                 <div class="coffee-origins__title">
                     <h2 class="heading-secondary">coffee origins</h2>
@@ -931,7 +942,7 @@
         </section>
 
         <!-- Personal account -->
-        <section class="personal-account">
+        <section class="personal-account" id="personalAccount">
             <div class="wrapper">
                 <div class="personal-account__content">
                     <h2 class="heading-secondary">personal account</h2>
@@ -960,7 +971,7 @@
         </section>
 
         <!-- Our warehouses -->
-        <section class="our-warehouses">
+        <section class="our-warehouses" id="ourWarehouses">
             <div class="wrapper">
                 <div class="our-warehouses__img">
                     <picture data-aos="fade-right">
@@ -1000,7 +1011,7 @@
         </section>
 
         <!-- We always offer products that can meet our customers’ expectations! -->
-        <section class="products-banner">
+        <section class="products-banner" id="productsBanner">
             <div class="wrapper">
                 <h2 class="heading-secondary">
                     We always offer products that can meet our customers’ expectations!
@@ -1017,7 +1028,7 @@
         </section>
 
         <!-- Our certificates -->
-        <section class="our-certificates">
+        <section class="our-certificates" id="ourCertificates">
             <div class="wrapper">
                 <h2 class="heading-secondary">our certificates</h2>
 
@@ -1046,7 +1057,7 @@
         </section>
 
         <!-- HOW TO ORDER -->
-        <section class="order">
+        <section class="order" id="order">
             <div class="wrapper">
                 <h2 class="heading-secondary">HOW TO ORDER</h2>
 
@@ -1215,7 +1226,7 @@
         </section>
 
         <!-- News -->
-        <section class="news">
+        <section class="news" id="news">
             <div class="wrapper">
                 <h2 class="heading-secondary">news</h2>
                 <div class="news__box" data-aos="fade-up">
@@ -1280,7 +1291,7 @@
         </section>
 
         <!-- Banner form -->
-        <section class="banner-form">
+        <section class="banner-form" id="bannerForm">
             <div class="wrapper">
                 <h2 class="heading-secondary">GREEN COFFEE IMPORTER FOR AZERBAIJAN, TURKEY AND EUROPE MARKET</h2>
                 <form class="send-form" method="post" style="width: 100%" data-aos="fade-up">
@@ -1419,7 +1430,7 @@
                     <a href="#" class="header__menu-link">Origins</a>
                 </li>
                 <li class="header__menu-item">
-                    <a href="#" class="header__menu-link">Services</a>
+                    <span class="header__menu-link">Services</span>
                     <ul class="header__submenu">
                         <li class="header__submenu-item">
                             <a href="#" class="header__submenu-link">Green coffee</a>
@@ -1442,7 +1453,7 @@
         </nav>
 
         <div class="header__contact">
-            <button class="header__button">Request a call</button>
+            <a href="/" class="header__button">Request a call</a>
             <a href="#" class="header__icon">
                 <img width="20" height="23" src="images/person.svg" alt="Account">
             </a>
@@ -1453,8 +1464,8 @@
             <div class="header__language">
                 <label for="languageSelect2" class="header__language-style" style="opacity: 0;">Choose your language:</label>
                 <select id="languageSelect2" class="header__select">
-                  <option value="en">English</option>
-                  <option value="fr">French</option>
+                  <option value="en">En</option>
+                  <option value="fr">Fr</option>
                 </select>
             </div>
         </div>
@@ -1467,10 +1478,10 @@
 
     <script>
         AOS.init({
-            duration: 1000, // Увеличиваем длительность для более медленного появления
-            easing: 'ease-in-out', // Более плавный тип easing
-            once: false,  // Анимация воспроизводится каждый раз при появлении элемента
-            mirror: true, // Анимация работает при скролле вверх
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: false,  
+            mirror: true,
         });
     </script>
 </body>
