@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initAccordion();
   initializeAccordion('.footer__accordion');
   initSmoothScroll();
+  initRequestCallPopup();
 });
 
 function initHeroVideo() {
@@ -187,25 +188,51 @@ function initDynamicHoverEffect() {
         element.style.cursor = "pointer";
     });
 
-    document.addEventListener("mouseover", (event) => {
-        const target = event.target;
-
+    const handleHover = (target, action) => {
         if (target.id?.startsWith("mapsImg")) {
             const idNumber = target.id.replace("mapsImg", "");
             const targetElement = document.querySelector(`.${baseClass}${idNumber}`);
-            targetElement?.classList.add(hoverClass);
-            target.style.fill = "#616E46";
+            if (action === "add") {
+                targetElement?.classList.add(hoverClass);
+                target.style.fill = "#616E46";
+            } else if (action === "remove") {
+                targetElement?.classList.remove(hoverClass);
+                target.style.fill = "";
+            }
+        }
+    };
+
+    document.addEventListener("mouseover", (event) => {
+        if (window.innerWidth >= 1200) {
+            handleHover(event.target, "add");
         }
     });
 
     document.addEventListener("mouseout", (event) => {
-        const target = event.target;
+        if (window.innerWidth >= 1200) {
+            handleHover(event.target, "remove");
+        }
+    });
 
-        if (target.id?.startsWith("mapsImg")) {
-            const idNumber = target.id.replace("mapsImg", "");
-            const targetElement = document.querySelector(`.${baseClass}${idNumber}`);
-            targetElement?.classList.remove(hoverClass);
-            target.style.fill = "";
+    document.addEventListener("click", (event) => {
+        if (window.innerWidth < 1200) {
+            const target = event.target;
+            if (target.id?.startsWith("mapsImg")) {
+                const idNumber = target.id.replace("mapsImg", "");
+                const targetElement = document.querySelector(`.${baseClass}${idNumber}`);
+
+                document.querySelectorAll(`.${baseClass}`).forEach((el) => {
+                    if (el !== targetElement) el.classList.remove(hoverClass);
+                });
+
+                if (targetElement?.classList.contains(hoverClass)) {
+                    targetElement.classList.remove(hoverClass);
+                    target.style.fill = "";
+                } else {
+                    targetElement?.classList.add(hoverClass);
+                    target.style.fill = "#616E46";
+                }
+            }
         }
     });
 }
@@ -310,6 +337,42 @@ function initSmoothScroll() {
         });
     });
 }
+
+function initRequestCallPopup() {
+    const modal = document.getElementById("requestCallModal");
+    const closeBtn = modal.querySelector(".popup-modal__close");
+    const requestButtons = document.querySelectorAll(".request-call");
+
+    if (!modal || !requestButtons.length) return;
+
+    const openModal = () => {
+        modal.style.display = "flex";
+        document.body.style.overflow = "hidden";
+    };
+
+    const closeModal = () => {
+        modal.style.display = "none";
+        document.body.style.overflow = "";
+    };
+
+    requestButtons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+            event.preventDefault();
+            openModal();
+        });
+    });
+
+    closeBtn.addEventListener("click", closeModal);
+
+    modal.addEventListener("click", (event) => {
+        if (event.target === modal) closeModal();
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closeModal();
+    });
+}
+
 
 
 
