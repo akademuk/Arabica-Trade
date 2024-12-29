@@ -36,48 +36,37 @@ function initBurgerMenu() {
     const burger = document.querySelector(".header__burger");
     const menu = document.querySelector(".mobile-menu");
     const overlay = document.querySelector(".overlay");
+    const header = document.querySelector(".header");
     const body = document.body;
 
-    if (!burger || !menu || !overlay) {
+    if (!burger || !menu || !overlay || !header) {
         return;
     }
 
     const animationDuration = 400;
 
     const openMenu = () => {
-        const scrollY = window.scrollY;
-        body.dataset.scrollY = scrollY;
         burger.classList.add("active");
         menu.classList.add("active");
         overlay.classList.add("active");
-
-        body.style.position = "fixed";
-        body.style.top = `-${scrollY}px`;
-        body.style.width = "100%";
-        body.style.overflow = "hidden";
+        body.classList.add("body-lock"); 
+        header.classList.add("scrolled");
     };
 
     const closeMenu = (targetId = null) => {
         burger.classList.remove("active");
         menu.classList.remove("active");
         overlay.classList.remove("active");
+        body.classList.remove("body-lock"); 
 
-        requestAnimationFrame(() => {
-            body.style.position = "";
-            body.style.top = "";
-            body.style.width = "";
-            body.style.overflow = "";
-            window.scrollTo(0, parseInt(body.dataset.scrollY || "0"));
-
-            if (targetId) {
-                setTimeout(() => {
-                    document.getElementById(targetId)?.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start",
-                    });
-                }, animationDuration);
-            }
-        });
+        if (targetId) {
+            setTimeout(() => {
+                document.getElementById(targetId)?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                });
+            }, animationDuration);
+        }
     };
 
     burger.addEventListener("click", () => {
@@ -373,6 +362,27 @@ function initRequestCallPopup() {
     });
 }
 
+const swiperContainer = document.querySelector('.swiper-container');
+if (swiperContainer) {
+  const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    spaceBetween: 8,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    on: {
+      init: function () {
+        const realSlidesCount = this.el.querySelectorAll('.swiper-slide:not(.swiper-slide-duplicate)').length;
+        document.querySelector('.total-slides').textContent = String(realSlidesCount).padStart(2, '0');
+        document.querySelector('.current-slide').textContent = String(this.realIndex + 1).padStart(2, '0');
+      },
+      slideChange: function () {
+        document.querySelector('.current-slide').textContent = String(this.realIndex + 1).padStart(2, '0');
+      },
+    },
+  });
+}
 
 
 

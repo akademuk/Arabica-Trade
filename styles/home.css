@@ -93,7 +93,6 @@
     z-index: 3;
 }
 
-
 /* Personal account */
 .personal-account {
     background: var(--white-color);
@@ -244,7 +243,7 @@
 .our-certificates__img {
     padding: 27px 39px;
     border-radius: 3px;
-    background: #F6F6F6;
+    background: #f6f6f6;
     box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.22);
 }
 
@@ -261,173 +260,10 @@
     box-shadow: 1px 1px 5px 0px var(--button-bg);
 }
 
-/* HOW TO ORDER */
-.order {
-    padding: 96px 0;
-}
-
-.order .wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    max-width: 1170px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.order__box {
-    display: flex;
-    gap: 30px;
-}
-
-.order__form {
-    display: flex;
-    width: 420px;
-    height: 503px;
-    padding: 25px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20px;
-    flex-shrink: 0;
-    border-radius: 3px;
-    background: var(--button-bg);
-    border: 1px solid rgba(255, 255, 255, 0.50);
-}
-
-.order__form h3 {
-    color: var(--white-color);
-    font-size: var(--font-size-25);
-    text-transform: uppercase;
-    text-align: center;
-    width: 100%;
-}
-
-.order__accordion {
-    width: 720px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.order__accordion-header {
-    display: flex;
-    align-items: center;
-    gap: 35px;
-    padding: 16px 25px;
-}
-
-.order__accordion-title {
-    font-size: var(--font-size-20);
-    line-height: 120%;
-}
-
-.order__accordion-arrow {
-    margin-left: auto;
-    transition: all 0.4s;
-}
-
-.order__accordion-item {
-    cursor: pointer;
-}
-
-.order__accordion-content p {
-    font-size: var(--font-size-18);
-    line-height: 120%;
-}
-
-.order__accordion-content {
-    max-height: 0;
-    padding: 0 25px;
-    overflow: hidden;
-    transition: max-height 0.3s ease, padding 0.3s ease;
-}
-
-.order__accordion-item.active .order__accordion-content {
-    max-height: 500px;
-    padding-bottom: 16px;
-}
-
-.order__accordion-item.active .order__accordion-arrow {
-    transform: rotate(180deg);
-}
-
-.order__accordion-item {
-    border-radius: 3px;
-    background: #EDEEE8;
-}
-
-.order__accordion-item:nth-of-type(2n) {
-    background: var(--background);
-}
-
-.order__form-box {
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.order__form form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.order__form form .inputs-field {
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.50);
-    height: 40px;
-    padding: 11px 14px;
-    background: transparent;
-    color: rgba(255, 255, 255, 0.50);
-    font-size: var(--font-size-15);
-    line-height: 120%;
-}
-
-.order__form form .inputs-n1 {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--white-color);
-    font-size: var(--font-size-15);
-    line-height: 120%;
-    left: 14px;
-}
-
-.order__form-box textarea.inputs-field {
-    resize: none;
-    height: 80px;
-}
-
-.order__form-box textarea.inputs-field:focus~.inputs-n1 {
-    transform: none;
-    top: 5px;
-    font-size: var(--font-size-10);
-}
-
-.order__form form .order__form-textarea .inputs-n1 {
-    top: 11px;
-    transform: none;
-}
-
-.order__form form button {
-    width: 100%;
-    margin-top: 10px;
-    height: 50px;
-    padding: 1px 6px;
-    text-align: center;
-    border-radius: 3px;
-    background: var(--white-color);
-    font-size: var(--font-size-20);
-    border: none;
-}
-
 /* News */
 .news {
     padding: 96px 0;
-    background: #EDEEE8;
+    background: #edeee8;
 }
 
 .news .wrapper {
@@ -577,28 +413,6 @@
         height: 185px;
     }
 
-    .order {
-        padding: 64px 16px;
-    }
-
-    .order .wrapper {
-        gap: 32px;
-    }
-
-    .order__box {
-        flex-direction: column;
-    }
-
-    .order__accordion {
-        width: 100%;
-    }
-
-    .order__form {
-        margin: 0 auto;
-        max-width: 420px;
-        width: 100%;
-    }
-
     .news {
         padding: 64px 16px;
     }
@@ -658,20 +472,6 @@
 
     .our-warehouses .wrapper {
         padding: 0;
-    }
-
-    .order__accordion-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-        position: relative;
-        padding-right: 32px;
-    }
-
-    .order__accordion-arrow {
-        position: absolute;
-        right: 16px;
-        top: 58px;
     }
 
     .news__article {
