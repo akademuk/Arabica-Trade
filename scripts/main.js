@@ -1,31 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
-  initHeroVideo();
-  initBurgerMenu();
-  initSubmenuToggle();
-  initHeaderScroll();
-  initCardHoverEffect();
-  initDynamicHoverEffect();
-  initSequentialFadeIn();
-  initAccordion();
-  initializeAccordion('.footer__accordion');
-  initSmoothScroll();
-  initRequestCallPopup();
+    initHeroVideo();
+    initBurgerMenu();
+    initSubmenuToggle();
+    initHeaderScroll();
+    initCardHoverEffect();
+    initDynamicHoverEffect();
+    initSequentialFadeIn();
+    initAccordion();
+    initializeAccordion('.footer__accordion');
+    initSmoothScroll();
+    initRequestCallPopup();
 });
 
 function initHeroVideo() {
     const heroBackground = document.querySelector(".hero__background");
-  
+
     if (!heroBackground) {
         return;
     }
-  
+
     const heroImage = heroBackground.querySelector(".hero__background-img");
     const heroVideo = heroBackground.querySelector(".hero__background-video");
-  
+
     if (!heroImage || !heroVideo) {
         return;
     }
-  
+
     window.addEventListener("load", () => {
         heroImage.style.opacity = "0";
         heroVideo.style.opacity = "1";
@@ -49,7 +49,7 @@ function initBurgerMenu() {
         burger.classList.add("active");
         menu.classList.add("active");
         overlay.classList.add("active");
-        body.classList.add("body-lock"); 
+        body.classList.add("body-lock");
         header.classList.add("scrolled");
     };
 
@@ -57,7 +57,7 @@ function initBurgerMenu() {
         burger.classList.remove("active");
         menu.classList.remove("active");
         overlay.classList.remove("active");
-        body.classList.remove("body-lock"); 
+        body.classList.remove("body-lock");
 
         if (targetId) {
             setTimeout(() => {
@@ -91,7 +91,7 @@ function initBurgerMenu() {
         }
     });
 }
-  
+
 function initSubmenuToggle() {
     const menuItems = document.querySelectorAll(".menu-item");
 
@@ -113,7 +113,7 @@ function initSubmenuToggle() {
         });
     });
 }
-  
+
 function initHeaderScroll() {
     const header = document.querySelector("header");
     const scrollThreshold = 100;
@@ -364,39 +364,34 @@ function initRequestCallPopup() {
 
 const swiperContainer = document.querySelector('.swiper-container');
 if (swiperContainer) {
-  const swiper = new Swiper('.swiper-container', {
-    loop: true,
-    spaceBetween: 8,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    on: {
-      init: function () {
-        const realSlidesCount = this.el.querySelectorAll('.swiper-slide:not(.swiper-slide-duplicate)').length;
-        document.querySelector('.total-slides').textContent = String(realSlidesCount).padStart(2, '0');
-        document.querySelector('.current-slide').textContent = String(this.realIndex + 1).padStart(2, '0');
-      },
-      slideChange: function () {
-        document.querySelector('.current-slide').textContent = String(this.realIndex + 1).padStart(2, '0');
-      },
-    },
-  });
+    const swiper = new Swiper('.swiper-container', {
+        loop: true,
+        spaceBetween: 8,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        on: {
+            init: function () {
+                const realSlidesCount = this.el.querySelectorAll('.swiper-slide:not(.swiper-slide-duplicate)').length;
+                document.querySelector('.total-slides').textContent = String(realSlidesCount).padStart(2, '0');
+                document.querySelector('.current-slide').textContent = String(this.realIndex + 1).padStart(2, '0');
+            },
+            slideChange: function () {
+                document.querySelector('.current-slide').textContent = String(this.realIndex + 1).padStart(2, '0');
+            },
+        },
+    });
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const sliderElement = document.querySelector('.full-slider');
+if (sliderElement) {
+    const swiper = new Swiper('.full-slider', {
+        lazy: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        loop: true,
+    });
+}
