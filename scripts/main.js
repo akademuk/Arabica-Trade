@@ -10,8 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
     initializeAccordion('.footer__accordion');
     initSmoothScroll();
     initRequestCallPopup();
+    initReadMoreFeature();
+    initExpandableBlocks();
 });
 
+// Home
 function initHeroVideo() {
     const heroBackground = document.querySelector(".hero__background");
 
@@ -32,6 +35,7 @@ function initHeroVideo() {
     });
 }
 
+// Home
 function initBurgerMenu() {
     const burger = document.querySelector(".header__burger");
     const menu = document.querySelector(".mobile-menu");
@@ -92,6 +96,7 @@ function initBurgerMenu() {
     });
 }
 
+// Home
 function initSubmenuToggle() {
     const menuItems = document.querySelectorAll(".menu-item");
 
@@ -114,6 +119,7 @@ function initSubmenuToggle() {
     });
 }
 
+// Home
 function initHeaderScroll() {
     const header = document.querySelector("header");
     const scrollThreshold = 100;
@@ -135,6 +141,7 @@ function initHeaderScroll() {
     toggleHeaderClass();
 }
 
+// Home
 function initCardHoverEffect() {
     const cards = document.querySelectorAll(".we-offer__box-card");
 
@@ -166,6 +173,7 @@ function initCardHoverEffect() {
     window.addEventListener("resize", updateCardBehavior);
 }
 
+// Home
 function initDynamicHoverEffect() {
     const baseClass = "coffee-origins__location";
     const hoverClass = "hovered";
@@ -226,6 +234,7 @@ function initDynamicHoverEffect() {
     });
 }
 
+// Home
 function initSequentialFadeIn() {
     const icons = document.querySelectorAll(".our-warehouses__icon");
     const container = document.querySelector(".our-warehouses");
@@ -256,6 +265,7 @@ function initSequentialFadeIn() {
     onScroll();
 }
 
+// Home
 function initAccordion() {
     const accordionItems = document.querySelectorAll(".order__accordion-item");
 
@@ -281,6 +291,7 @@ function initAccordion() {
     });
 }
 
+// Home
 function initializeAccordion(selector) {
     const accordion = document.querySelector(selector);
 
@@ -308,6 +319,7 @@ function initializeAccordion(selector) {
     });
 }
 
+// Home
 function initSmoothScroll() {
     const links = document.querySelectorAll('a[href^="#"]');
 
@@ -327,6 +339,7 @@ function initSmoothScroll() {
     });
 }
 
+// Home
 function initRequestCallPopup() {
     const modal = document.getElementById("requestCallModal");
     const closeBtn = modal.querySelector(".popup-modal__close");
@@ -362,6 +375,7 @@ function initRequestCallPopup() {
     });
 }
 
+// WHAT WE DO
 const swiperContainer = document.querySelector('.swiper-container');
 if (swiperContainer) {
     const swiper = new Swiper('.swiper-container', {
@@ -384,6 +398,7 @@ if (swiperContainer) {
     });
 }
 
+// Peru
 const sliderElement = document.querySelector('.full-slider');
 if (sliderElement) {
     const swiper = new Swiper('.full-slider', {
@@ -395,3 +410,63 @@ if (sliderElement) {
         loop: true,
     });
 }
+
+// Green coffee
+function initReadMoreFeature() {
+    const contentBoxes = document.querySelectorAll('.brief__content-box');
+
+    contentBoxes.forEach((contentBox) => {
+        const readMoreButton = contentBox.querySelector('.brief__content-read');
+        const contentText = contentBox.querySelector('.brief__content-text');
+
+        if (contentText && readMoreButton) {
+            readMoreButton.addEventListener('click', () => {
+                contentBox.classList.toggle('expanded');
+                readMoreButton.classList.toggle('rotated'); 
+
+                const buttonTextNode = readMoreButton.querySelector('span');
+
+                if (buttonTextNode) {
+                    buttonTextNode.textContent = contentBox.classList.contains('expanded') 
+                        ? ' Read less' 
+                        : ' Read more';
+                }
+            });
+        }
+    });
+}
+
+function initExpandableBlocks() {
+    const blocks = document.querySelectorAll('.guide__item');
+
+    if (blocks.length > 0) {
+        const firstBlock = blocks[0];
+        firstBlock.classList.add('active'); 
+
+        blocks.forEach((block) => {
+            block.addEventListener('click', () => {
+                if (window.innerWidth <= 1200) { 
+                    blocks.forEach((b) => b.classList.remove('active')); 
+                    block.classList.toggle('active');
+                }
+            });
+
+            block.addEventListener('mouseenter', () => {
+                if (window.innerWidth > 1200) { 
+                    blocks.forEach((b) => b.classList.remove('active'));
+                    block.classList.add('active');
+                }
+            });
+
+            block.addEventListener('mouseleave', () => {
+                if (window.innerWidth > 1200) { 
+                    blocks.forEach((b) => b.classList.remove('active'));
+                    firstBlock.classList.add('active');
+                }
+            });
+        });
+    }
+}
+
+
+
