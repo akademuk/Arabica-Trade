@@ -1,0 +1,224 @@
+/* THREE MAIN DEGREES OF ROASTING */
+.degrees {
+    padding: 96px 0;
+}
+
+.degrees .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.degrees__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.degrees__content .paragraph {
+    text-align: center;
+}
+
+.degrees__box {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.degrees__item {
+    flex: 1;
+    min-width: 370px;
+    padding: 30px 16px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.degrees__item .heading-tertiary {
+    text-align: center;
+}
+
+.degrees__item1 {
+    background: #EDEEE8;
+}
+
+.degrees__item2 {
+    background: var(--background);
+}
+
+.degrees__item3 {
+    background: var(--button-bg);
+}
+
+.degrees__item .paragraph {
+    text-align: center;
+}
+
+.degrees__item3 .heading-tertiary {
+    color: var(--white-color);
+}
+
+.degrees__item3 .paragraph {
+    color: var(--white-color);
+}
+
+/* Freshly roasted coffee with ARABICA TRADE */
+
+.freshly {
+    height: 850px;
+    position: relative;
+}
+
+.freshly__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.freshly__img::after {
+    content: "";
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.freshly__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.freshly .wrapper {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 870px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    gap: 25px;
+}
+
+.freshly .heading-secondary {
+    color: var(--white-color);
+    text-align: center;
+}
+
+.freshly .paragraph {
+    color: var(--white-color);
+    text-align: center;
+    line-height: 120%;
+}
+
+/* ADVANTAGES OF COOPERATING WITH US */
+.roasted-collaboration.collaboration .order__accordion .heading-secondary{
+    margin-bottom: 0;
+}
+
+.roasted-collaboration ul {
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.roasted-collaboration ul li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: var(--font-size-20);
+    line-height: 120%; 
+}
+
+.collaboration {
+    background: var(--background);
+}
+
+.collaboration .order__accordion {
+    gap: 16px;
+}
+
+.collaboration .order__accordion .heading-secondary {
+    margin-bottom: 34px;
+}
+
+.collaboration .order__form h3 {
+    color: var(--black-color);
+    font-size: var(--font-size-25);
+    text-transform: uppercase;
+    padding: 3px 0 3px 15px;
+    border-left: 1px solid var(--black-color);
+    text-align: left;
+}
+
+.collaboration .order__form {
+    border-radius: 3px;
+    background: var(--white-color);
+}
+
+.collaboration .order__form form .inputs-field {
+    border: 1px solid rgba(0, 0, 0, 0.50);
+    color: rgba(0, 0, 0, 0.50);
+    font-size: 15px;
+    line-height: 120%; 
+}
+
+.collaboration .order__form form .inputs-n1 {
+    color: rgba(0, 0, 0, 0.50);
+    font-size: 15px;
+    line-height: 120%; 
+}
+
+.collaboration .order__form form .submit-form{
+    color: var(--white-color);
+    background: var(--button-bg);
+    border: 1px solid transparent;
+    transition: all 0.4s;
+}
+
+.collaboration .order__form form .submit-form:hover{
+    color: var(--button-bg);
+    border:1px solid var(--button-bg);
+    background: var(--white-color);
+}
+
+
+
+@media (max-width: 1200px) {
+    .degrees {
+        padding: 64px 16px;
+    }
+
+    .freshly {
+        height: 450px;
+        position: relative;
+        padding: 0 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .degrees__item .heading-tertiary {
+        font-size: var(--font-size-20);
+    }
+
+    .degrees__item {
+        min-width: 100%;
+    }
+}

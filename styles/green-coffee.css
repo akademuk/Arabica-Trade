@@ -24,6 +24,7 @@
 .brief__img img {
     width: 100%;
     height: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
 }
 
@@ -38,7 +39,7 @@
     flex-direction: column;
     gap: 30px;
     overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.4s ease; 
+    transition: max-height 0.4s ease, padding 0.4s ease;
 }
 
 .brief__content-read {
@@ -53,37 +54,37 @@
 .brief__content-read span {
     color: var(--black-color);
     font-size: 18px;
-    line-height: 120%; 
+    line-height: 120%;
     text-decoration: underline;
 }
 
 .brief__content-text {
     display: -webkit-box;
-    -webkit-line-clamp: 6; 
+    -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-height: calc(1.2em * 6); 
-    transition: max-height 0.4s ease; 
+    max-height: calc(1.2em * 6);
+    transition: max-height 0.4s ease;
 }
 
 .brief__content-box.expanded .brief__content-text {
     -webkit-line-clamp: unset;
-    max-height: 500px; 
+    max-height: 500px;
     overflow: visible;
 }
 
 .brief__content-read img {
-    transition: all 0.4s;  
+    transition: all 0.4s;
 }
 
-.brief__content-read.rotated img{
+.brief__content-read.rotated img {
     transition: all 0.4s;
     transform: rotate(180deg);
 }
 
 .brief__content-box.expanded {
-    max-height: 1000px; 
+    max-height: 1000px;
 }
 
 /* Coffee Varieties */
@@ -92,7 +93,7 @@
     padding: 96px 0;
 }
 
-.coffee-varieties .wrapper{
+.coffee-varieties .wrapper {
     max-width: 1170px;
     width: 100%;
     margin: 0 auto;
@@ -143,7 +144,7 @@
     padding: 96px 0;
 }
 
-.guide .wrapper{
+.guide .wrapper {
     max-width: 1170px;
     width: 100%;
     margin: 0 auto;
@@ -172,10 +173,10 @@
     display: flex;
     overflow: hidden;
     width: 100%;
-    height: 355px; 
+    height: 355px;
 }
 
-.guide__item{
+.guide__item {
     flex: 1;
     position: relative;
     overflow: hidden;
@@ -250,6 +251,7 @@
 }
 
 .guide__item3 .guide__item-icon img {
+    -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(32%) saturate(0%) hue-rotate(58deg) brightness(115%) contrast(100%);
     filter: brightness(0) saturate(100%) invert(100%) sepia(32%) saturate(0%) hue-rotate(58deg) brightness(115%) contrast(100%);
 }
 
@@ -266,6 +268,7 @@
 }
 
 .guide__item3 .guide__item-content .guide__item-link::after {
+    -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(32%) saturate(0%) hue-rotate(58deg) brightness(115%) contrast(100%);
     filter: brightness(0) saturate(100%) invert(100%) sepia(32%) saturate(0%) hue-rotate(58deg) brightness(115%) contrast(100%);
 }
 
@@ -346,25 +349,25 @@
     border: 1px solid rgba(0, 0, 0, 0.50);
     color: rgba(0, 0, 0, 0.50);
     font-size: 15px;
-    line-height: 120%; 
+    line-height: 120%;
 }
 
 .collaboration .order__form form .inputs-n1 {
     color: rgba(0, 0, 0, 0.50);
     font-size: 15px;
-    line-height: 120%; 
+    line-height: 120%;
 }
 
-.collaboration .order__form form .submit-form{
+.collaboration .order__form form .submit-form {
     color: var(--white-color);
     background: var(--button-bg);
     border: 1px solid transparent;
     transition: all 0.4s;
 }
 
-.collaboration .order__form form .submit-form:hover{
+.collaboration .order__form form .submit-form:hover {
     color: var(--button-bg);
-    border:1px solid var(--button-bg);
+    border: 1px solid var(--button-bg);
     background: var(--white-color);
 }
 
@@ -384,7 +387,7 @@
         min-width: auto;
     }
 
-    .brief .wrapper  {
+    .brief .wrapper {
         flex-direction: column;
         gap: 32px;
     }
