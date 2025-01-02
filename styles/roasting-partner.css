@@ -103,7 +103,7 @@
     gap: 16px;
 }
 
-.roasting-partner .order__form h3 {
+.roasting-partner .send-form h3 {
     color: var(--black-color);
     font-size: var(--font-size-25);
     text-transform: uppercase;
@@ -112,33 +112,21 @@
     text-align: left;
 }
 
-.roasting-partner .order__form {
-    border-radius: 3px;
-    background: var(--white-color);
-    border: 1px solid var(--black-color);
-}
-
-.roasting-partner .order__form form .inputs-field {
+.roasting-partner .send-form .inputs-field {
     border: 1px solid rgba(0, 0, 0, 0.50);
     color: rgba(0, 0, 0, 0.50);
     font-size: 15px;
     line-height: 120%; 
 }
 
-.roasting-partner .order__form form .inputs-n1 {
-    color: rgba(0, 0, 0, 0.50);
-    font-size: 15px;
-    line-height: 120%; 
-}
-
-.roasting-partner .order__form form .submit-form{
+.roasting-partner .send-form .submit-form{
     color: var(--white-color);
     background: var(--button-bg);
     border: 1px solid transparent;
     transition: all 0.4s;
 }
 
-.roasting-partner .order__form form .submit-form:hover{
+.roasting-partner .send-form .submit-form:hover{
     color: var(--button-bg);
     border:1px solid var(--button-bg);
     background: var(--white-color);

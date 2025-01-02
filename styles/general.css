@@ -291,7 +291,8 @@
         display: flex;
         width: 180px;
         height: 40px;
-        padding: 1px 6px;
+        padding: 6.5px 6px;
+        line-height: 100%;
         justify-content: center;
         align-items: center;
         gap: 10px;
@@ -783,45 +784,53 @@
         font-size: var(--font-size-25);
     }
 
-    .banner-form .order__form-box input {
+    .banner-form .form-group input {
         width: 400px;
         height: 40px;
         border-radius: 5px;
         border: 1px solid var(--black-color);
         padding: 11px 14px;
+        color: var(--black-color);
     }
 
-    .banner-form .order__form-box input::-webkit-input-placeholder {
+    .banner-form .form-group input::placeholder {
+        color: var(--black-color);
         font-family: "Evolventa";
         font-size: var(--font-size-15);
         line-height: 120%;
     }
 
-    .banner-form .order__form-box input::-moz-placeholder {
+    .banner-form .form-group input::-webkit-input-placeholder {
         font-family: "Evolventa";
         font-size: var(--font-size-15);
         line-height: 120%;
     }
 
-    .banner-form .order__form-box input:-ms-input-placeholder {
+    .banner-form .form-group input::-moz-placeholder {
         font-family: "Evolventa";
         font-size: var(--font-size-15);
         line-height: 120%;
     }
 
-    .banner-form .order__form-box input::-ms-input-placeholder {
+    .banner-form .form-group input:-ms-input-placeholder {
         font-family: "Evolventa";
         font-size: var(--font-size-15);
         line-height: 120%;
     }
 
-    .banner-form .order__form-box input::placeholder {
+    .banner-form .form-group input::-ms-input-placeholder {
         font-family: "Evolventa";
         font-size: var(--font-size-15);
         line-height: 120%;
     }
 
-    .banner-form .submit-form {
+    .banner-form .form-group input::placeholder {
+        font-family: "Evolventa";
+        font-size: var(--font-size-15);
+        line-height: 120%;
+    }
+
+    .banner-form .acform-submit {
         padding: 9px 43px;
     }
 
@@ -953,11 +962,9 @@
         background: var(--background);
     }
 
-    .order__form-box {
+    .form-group {
         position: relative;
         width: 100%;
-        display: flex;
-        flex-direction: column;
     }
 
     .order__form form {
@@ -967,7 +974,7 @@
         gap: 10px;
     }
 
-    .order__form form .inputs-field {
+    .order__form form .form-group {
         border-radius: 5px;
         border: 1px solid rgba(255, 255, 255, 0.5);
         height: 40px;
@@ -978,42 +985,102 @@
         line-height: 120%;
     }
 
-    .order__form form .inputs-n1 {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        color: var(--white-color);
-        font-size: var(--font-size-15);
-        line-height: 120%;
-        left: 14px;
-    }
-
-    .order__form-box textarea.inputs-field {
+    .form-group textarea {
         resize: none;
         height: 80px;
     }
 
-    .order__form-box textarea.inputs-field:focus~.inputs-n1 {
+    .form-group textarea.inputs-field:focus~.inputs-n1 {
         transform: none;
         top: 5px;
         font-size: var(--font-size-10);
     }
 
-    .order__form form .order__form-textarea .inputs-n1 {
-        top: 11px;
-        transform: none;
+    .form-group input{
+        font-family: var(--font-evolventa), Arial, Helvetica, sans-serif;
+        height: 100%;
+        width: 100%;
+        background: transparent;
+        border: none;
+        color: rgba(255, 255, 255, 0.50);
+        font-size: var(--font-size-15);
+        line-height: 120%; 
     }
 
-    .order__form form button {
+    .form-group input::placeholder {
+        font-family: var(--font-evolventa), Arial, Helvetica, sans-serif;
+        color: rgba(255, 255, 255, 0.50);
+        font-size: var(--font-size-15);
+        line-height: 120%;  
+    }
+
+    .order__form form .form-group-btn {
+        border: none;
         width: 100%;
-        margin-top: 10px;
+        display: flex;
         height: 50px;
         padding: 1px 6px;
-        text-align: center;
+        justify-content: center;
+        align-items: center;
         border-radius: 3px;
         background: var(--white-color);
-        font-size: var(--font-size-20);
+        margin-top: 20px;
+    }
+
+    .order__form form select {
+        font-family: var(--font-evolventa), Arial, Helvetica, sans-serif;
+        color: rgba(255, 255, 255, 0.50);
+        font-size: var(--font-size-15);
+        line-height: 120%;  
+        width: 100%;
+        background: transparent;
         border: none;
+        padding: 0;
+    }
+
+    .order__form form select option {
+        font-family: var(--font-evolventa), Arial, Helvetica, sans-serif;
+        background: var(--button-bg);
+        color: var(--white-color);
+        font-size: var(--font-size-15);
+        line-height: 120%;  
+        width: 100%;
+        border: none;
+        padding: 0;
+    }
+
+    .order__form form .form-group-btn button {
+        font-family: var(--font-evolventa), Arial, Helvetica, sans-serif;
+        background: var(--white-color);
+        color: var(--black-color);
+        font-size: var(--font-size-20);
+        width: 100%;
+        background: transparent;
+        border: none;
+        padding: 0;
+    }
+
+    .order__form form .form-group.form-group-textarea {
+        height: 80px;
+    }
+
+    .form-group-textarea textarea {
+        font-family: var(--font-evolventa), Arial, Helvetica, sans-serif;
+        background: var(--white-color);
+        color: rgba(255, 255, 255, 0.50);
+        font-size: var(--font-size-15);
+        line-height: 120%;  
+        width: 100%;
+        background: transparent;
+        border: none;
+        padding: 0;
+    }
+
+    .form-group-textarea textarea::placeholder {
+        font-family: var(--font-evolventa), Arial, Helvetica, sans-serif;
+        color: rgba(255, 255, 255, 0.50);
+        font-size: var(--font-size-15);
+        line-height: 120%;   
     }
 
     /* Footer */
@@ -1239,33 +1306,31 @@
 
     .popup-modal__content form {
         display: flex;
+        width: 100%;
         flex-direction: column;
-        gap: 10px;
+        gap: 20px;
     }
 
-    .popup-modal__content form .order__form-box {
+    .popup-modal__content form .form-group {
         position: relative;
         width: 100%;
         display: flex;
         flex-direction: column;
     }
 
-    .popup-modal__content form .inputs-n1 {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        color: var(--white-color);
-        font-size: var(--font-size-15);
-        line-height: 120%;
-        left: 14px;
-    }
-
     .popup-modal__content form input {
         border-radius: 5px;
+        width: 100%;
         border: 1px solid rgba(255, 255, 255, 0.50);
         height: 40px;
         padding: 11px 14px;
         background: transparent;
+        color: rgba(255, 255, 255, 0.50);
+        font-size: var(--font-size-15);
+        line-height: 120%;
+    }
+
+    .popup-modal__content form input::placeholder {
         color: rgba(255, 255, 255, 0.50);
         font-size: var(--font-size-15);
         line-height: 120%;
@@ -1599,7 +1664,7 @@
             height: auto;
         }
 
-        .banner-form .order__form-box input {
+        .banner-form .form-group input {
             width: 100%;
         }
 

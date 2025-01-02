@@ -333,7 +333,11 @@
     background: var(--background);
 }
 
-.collaboration .order__form h3 {
+.collaboration .order__form {
+    margin: 0 auto;
+}
+
+.collaboration .send-form h3 {
     color: var(--black-color);
     font-size: var(--font-size-25);
     text-transform: uppercase;
@@ -342,35 +346,29 @@
     text-align: left;
 }
 
-.collaboration .order__form {
+.collaboration .send-form {
     border-radius: 3px;
-    background: var(--white-color);
+    background: transparent;
     max-width: 570px;
     width: 100%;
     margin: 0 auto;
 }
 
-.collaboration .order__form form .inputs-field {
-    border: 1px solid rgba(0, 0, 0, 0.50);
+.collaboration .send-form .form-group {
+    border: 1px solid rgba(255, 255, 255, 0.50);
     color: rgba(0, 0, 0, 0.50);
     font-size: 15px;
     line-height: 120%;
 }
 
-.collaboration .order__form form .inputs-n1 {
-    color: rgba(0, 0, 0, 0.50);
-    font-size: 15px;
-    line-height: 120%;
-}
-
-.collaboration .order__form form .submit-form {
+.collaboration .send-form .submit-form {
     color: var(--white-color);
     background: var(--button-bg);
     border: 1px solid transparent;
     transition: all 0.4s;
 }
 
-.collaboration .order__form form .submit-form:hover {
+.collaboration .send-form .submit-form:hover {
     color: var(--button-bg);
     border: 1px solid var(--button-bg);
     background: var(--white-color);

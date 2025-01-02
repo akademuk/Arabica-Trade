@@ -152,19 +152,19 @@
         <section class="banner-form" id="bannerForm">
             <div class="wrapper" data-aos="fade-up">
                 <h2 class="heading-secondary">GREEN COFFEE IMPORTER FOR AZERBAIJAN, TURKEY AND EUROPE MARKET</h2>
-                <form class="send-form" method="post" style="width: 100%" data-aos="fade-up">
+                <form id="test_form1" class="send-form" method="POST">
                     <p class="banner-form__text">Once a week we send a digest with the most popular articles</p>
-                    <div class="col-4 p-15-all media-phone p-0 order__form-box">
-                        <label for="email3" class="visually-hidden">Email Address*</label>
-                        <input class="inputs-field email" id="email3" name="email" autocomplete="off" required
-                            placeholder="Email*">
-                        <span class="valid-area-e"></span>
+                    <div class="form-group">
+                        <input id="acform-emailAddress" value="" name="email" type="email" class="acform-email" placeholder="Email*">
+                        <div class="acform-error error"></div>
                     </div>
-                    <div class="col-12 col-md-4 p-15-all p-0">
-                        <button class="submit-form button-style">Subscribe</button>
+                    <div class="form-group ">
+                        <button type="submit" value="Send" class="acform-submit submit-form button-style">Subscribe</button>
+                        <div class="acform-error error"></div>
                     </div>
+                    <div style="display:none" class="acform-ok"></div>
+                    <input type="hidden" name="action" value="test_form">
                 </form>
-
             </div>
             <div class="banner-form__img">
                 <picture>
@@ -335,24 +335,25 @@
         <div class="popup-modal__content">
             <span class="popup-modal__close">&times;</span>
             <h2>Request a Call</h2>
-            <form class="send-form" id="requestCallForm" method="post" style="width: 100%">
-                <div class="col-4 p-15-all p-0 order__form-box">
-                    <label for="name2" class="inputs-n1">Name &amp; Surname</label>
-                    <input class="inputs-field" type="text" name="name" id="name2" autocomplete="on" required="">
+            <form id="test_form1" class="send-form" method="POST">
+                <div class="form-group ">
+                    <input id="acform-test" value="" name="test" type="text" class="acform-test" placeholder="Name">
+                    <div class="acform-error error"></div>
                 </div>
-                <div class="col-4 p-15-all media-phone p-0 order__form-box">
-                    <label for="email2" class="inputs-n1">Email</label>
-                    <input class="inputs-field email" type="email" name="email" id="email2" autocomplete="off" required="">
-                    <span class="valid-area-e"></span>
+                <div class="form-group">
+                    <input id="acform-email" value="" name="email" type="email" class="acform-email" placeholder="Email">
+                    <div class="acform-error error"></div>
                 </div>
-                <div class="col-4 p-15-all media-phone p-0 order__form-box">
-                    <label for="tel2" class="inputs-n1">Phone</label>
-                    <input class="inputs-field phone" type="tel" name="tel" id="tel2" required="">
-                    <span class="valid-area-p"></span>
+                <div class="form-group">
+                    <input id="acform-tel" value="" name="email" type="tel" class="acform-tel" placeholder="Phone">
+                    <div class="acform-error error"></div>
                 </div>
-                <div class="col-12 col-md-4 p-15-all p-0">
-                    <button class="submit-form">Send</button>
+                <div class="form-group ">
+                    <button type="submit" value="Send" class="acform-submit">Send</button>
+                    <div class="acform-error error"></div>
                 </div>
+                <div style="display:none" class="acform-ok"></div>
+                <input type="hidden" name="action" value="test_form">
             </form>
         </div>
     </div>
