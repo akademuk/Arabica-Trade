@@ -364,6 +364,41 @@ body.modal-open {
     color: var(--black-color);
 }
 
+.header-black {
+    background: var(--white-color);
+    top: 0;
+}
+
+.header-black .header__logo img {
+    content: url(../images/logo-black.svg);
+}
+
+.header-black .header__menu-link {
+    color: var(--black-color);
+}
+
+.header-black .header__menu-item::before {
+    background: url(../images/arrow-black.svg);
+}
+
+.header-black .header__button {
+    border: 1px solid var(--black-color);
+    color: var(--black-color);
+}
+
+.header-black .header__icon {
+    -webkit-filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(7500%) hue-rotate(247deg) brightness(111%) contrast(115%);
+    filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(7500%) hue-rotate(247deg) brightness(111%) contrast(115%);
+}
+
+.header-black .header__value {
+    color: var(--black-color);
+}
+
+.header-black .header__select {
+    color: var(--black-color);
+}
+
 
 /* Fixed navigation */
 .fixed-nav {
