@@ -102,6 +102,15 @@
     border-radius: 50%;
     border: 1px solid var(--black-color);
     object-fit: none;
+    transition: all 0.4s;
+}
+
+.header__submenu-link:hover {
+    color: var(--button-bg);  
+}
+
+.vacancies__card-link:hover img {
+    transform: translateX(20px);
 }
 
 @media (max-width: 1200px) {

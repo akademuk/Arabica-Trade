@@ -194,7 +194,7 @@
 
     .header__submenu {
         position: absolute;
-        top: 61px;
+        top: 67px;
         width: 186px;
         border-radius: 3px;
         background: #D9D9D9;
@@ -213,10 +213,16 @@
         transition: all 0.4s;
     }
 
+    .header__submenu-link:hover {
+      color: var(--button-bg);  
+    }
+
     .header__menu-item {
         display: flex;
         align-items: center;
         gap: 5px;
+        padding: 7px 0;
+        cursor: pointer;
     }
 
     .header__menu-item:hover .header__submenu {
@@ -228,11 +234,18 @@
         transition: all 0.4s;
     }
 
+    .header.scrolled .header__menu-item:hover .header__menu-link {
+        color: var(--button-bg);
+    }
+
+    .header.scrolled .header__menu-item:hover::before{
+        -webkit-filter: brightness(0) saturate(100%) invert(36%) sepia(65%) saturate(235%) hue-rotate(38deg) brightness(97%) contrast(85%);
+                filter: brightness(0) saturate(100%) invert(36%) sepia(65%) saturate(235%) hue-rotate(38deg) brightness(97%) contrast(85%);
+    }
+
     .header__menu-item:hover::before {
-        transition: all 0.4s;
-        background: url(../images/arrow-active.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
+        -webkit-filter: brightness(0) saturate(100%) invert(36%) sepia(65%) saturate(235%) hue-rotate(38deg) brightness(97%) contrast(85%);
+                filter: brightness(0) saturate(100%) invert(36%) sepia(65%) saturate(235%) hue-rotate(38deg) brightness(97%) contrast(85%);
     }
 
     .header__menu-item::before {
@@ -326,10 +339,16 @@
 
     .header .header__language {
         position: relative;
+        padding: 7px 0;
+    }
+
+    .header .header__language:hover .header__language-text {
+        color: var(--button-bg);
     }
 
     .header .header__language:hover .header__language-text img {
-        transform: rotate(180deg);
+        -webkit-filter: brightness(0) saturate(100%) invert(41%) sepia(33%) saturate(396%) hue-rotate(38deg) brightness(92%) contrast(92%);
+                filter: brightness(0) saturate(100%) invert(41%) sepia(33%) saturate(396%) hue-rotate(38deg) brightness(92%) contrast(92%);
     }
 
     .header__language-text {
@@ -341,12 +360,13 @@
     }
 
     .header__language-text img {
-        filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(327deg) brightness(103%) contrast(106%);
+        -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(327deg) brightness(103%) contrast(106%);
+                filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(327deg) brightness(103%) contrast(106%);
     }
 
     .header__language-menu {
         position: absolute;
-        top: 25px;
+        top: 35px;
         width: 100px;
         border-radius: 3px;
         background: #D9D9D9;
@@ -382,6 +402,10 @@
         transition: all 0.4s;
     }
 
+    .header__language-menu li a:hover {
+        color: var(--button-bg);
+    }
+
     .header.scrolled {
         background: var(--white-color);
         top: 0;
@@ -399,9 +423,41 @@
         background: url(../images/arrow-black.svg);
     }
 
+    .header-black .header__button:hover {
+        border: 1px solid transparent;
+        color: var(--white-color);
+        background: var(--button-bg);
+    }
+
+    .header-black .header__language-text {
+        color: var(--black-color);
+    }
+
+    
+    .header-black .header__language-text img {
+        -webkit-filter: brightness(0) saturate(100%) invert(0%) sepia(55%) saturate(5958%) hue-rotate(101deg) brightness(99%) contrast(94%);
+                filter: brightness(0) saturate(100%) invert(0%) sepia(55%) saturate(5958%) hue-rotate(101deg) brightness(99%) contrast(94%);
+    }
+
     .header.scrolled .header__button {
         border: 1px solid var(--black-color);
         color: var(--black-color);
+        transition: all 0.4s;
+    }
+
+    .header__icon:hover img {
+        -webkit-filter: brightness(0) saturate(100%) invert(41%) sepia(33%) saturate(396%) hue-rotate(38deg) brightness(92%) contrast(92%);
+                filter: brightness(0) saturate(100%) invert(41%) sepia(33%) saturate(396%) hue-rotate(38deg) brightness(92%) contrast(92%);
+    }
+
+    .header__icon:hover span {
+        color: var(--button-bg);
+    }
+
+    .header.scrolled .header__button:hover {
+        border: 1px solid transparent;
+        color: var(--white-color);
+        background: var(--button-bg);
     }
 
     .header.scrolled .header__icon {
@@ -409,6 +465,15 @@
         filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(7500%) hue-rotate(247deg) brightness(111%) contrast(115%);
     }
 
+    .header.scrolled .header__icon:hover {
+        -webkit-filter: brightness(0) saturate(100%) invert(41%) sepia(33%) saturate(396%) hue-rotate(38deg) brightness(92%) contrast(92%);
+                filter: brightness(0) saturate(100%) invert(41%) sepia(33%) saturate(396%) hue-rotate(38deg) brightness(92%) contrast(92%);
+    }
+
+    .header.scrolled .header__icon:hover span {
+        color: var(--button-bg);
+    }
+    
     .header.scrolled .header__value {
         color: var(--black-color);
     }
@@ -418,7 +483,8 @@
     }
 
     .header.scrolled .header__language-text img{
-        filter: brightness(0) saturate(100%) invert(0%) sepia(55%) saturate(5958%) hue-rotate(101deg) brightness(99%) contrast(94%);
+        -webkit-filter: brightness(0) saturate(100%) invert(0%) sepia(55%) saturate(5958%) hue-rotate(101deg) brightness(99%) contrast(94%);
+                filter: brightness(0) saturate(100%) invert(0%) sepia(55%) saturate(5958%) hue-rotate(101deg) brightness(99%) contrast(94%);
     }
 
     .header.scrolled .header__select {
@@ -1345,7 +1411,8 @@
 
         
         .mobile-menu .header__language-text img{
-            filter: brightness(0) saturate(100%) invert(0%) sepia(55%) saturate(5958%) hue-rotate(101deg) brightness(99%) contrast(94%);
+            -webkit-filter: brightness(0) saturate(100%) invert(0%) sepia(55%) saturate(5958%) hue-rotate(101deg) brightness(99%) contrast(94%);
+                    filter: brightness(0) saturate(100%) invert(0%) sepia(55%) saturate(5958%) hue-rotate(101deg) brightness(99%) contrast(94%);
         }
 
         .mobile-menu .header__language-menu::before {
