@@ -1,0 +1,193 @@
+/* Specialized services of ARABICA TRADE */
+.specialized-services {
+    padding: 96px 0;
+}
+
+.specialized-services .wrapper {
+    display: flex;
+    align-items: center;
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.specialized-services__left {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.specialized-services__left .paragraph {
+    line-height: 120%;
+}
+
+.specialized-services__right {
+    width: 624px;
+    min-width: 624px;
+    height: 543px;
+}
+
+.specialized-services__right img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+}
+
+/* WHY BUY FROM US */
+.why-buy {
+    padding: 96px 0;
+    background: #D1D4CC;
+    position: relative;
+}
+
+.why-buy .wrapper {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.why-buy .wrapper .heading-secondary {
+    max-width: 720px;
+    width: 100%;
+}
+
+.why-buy .order__accordion {
+    max-width: 720px;
+    width: 100%; 
+}
+
+.why-buy-img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.why-buy .order__accordion-arrow {
+    margin-left: 0;
+}
+
+.why-buy .order__accordion-item {
+    background: transparent;
+    border-left: 1px solid var(--black-color);
+    border-radius: 0;
+}
+
+.why-buy .order__accordion {
+    gap: 25px;
+}
+
+.why-buy .order__accordion-header {
+    gap: 15px;
+    padding: 14px 20px;
+}
+
+.why-buy .order__accordion-content {
+    padding: 0 20px;
+}
+
+.why-buy .order__accordion-item.active .order__accordion-content {
+    padding-bottom: 14px;
+}
+
+.why-buy .order__accordion {
+    position: relative;
+    z-index: 2;
+}
+
+.roasting-partner .order__accordion {
+    gap: 16px;
+}
+
+.roasting-partner .order__form h3 {
+    color: var(--black-color);
+    font-size: var(--font-size-25);
+    text-transform: uppercase;
+    padding: 3px 0 3px 15px;
+    border-left: 1px solid var(--black-color);
+    text-align: left;
+}
+
+.roasting-partner .order__form {
+    border-radius: 3px;
+    background: var(--white-color);
+    border: 1px solid var(--black-color);
+}
+
+.roasting-partner .order__form form .inputs-field {
+    border: 1px solid rgba(0, 0, 0, 0.50);
+    color: rgba(0, 0, 0, 0.50);
+    font-size: 15px;
+    line-height: 120%; 
+}
+
+.roasting-partner .order__form form .inputs-n1 {
+    color: rgba(0, 0, 0, 0.50);
+    font-size: 15px;
+    line-height: 120%; 
+}
+
+.roasting-partner .order__form form .submit-form{
+    color: var(--white-color);
+    background: var(--button-bg);
+    border: 1px solid transparent;
+    transition: all 0.4s;
+}
+
+.roasting-partner .order__form form .submit-form:hover{
+    color: var(--button-bg);
+    border:1px solid var(--button-bg);
+    background: var(--white-color);
+}
+
+@media (max-width: 1200px) {
+    .specialized-services {
+        padding: 64px 16px;
+    }
+
+    .specialized-services__right {
+        width: 424px;
+        min-width: 424px;
+        height: 343px;
+    }
+
+    .specialized-services__left {
+        gap: 32px;
+    }
+
+    .why-buy {
+        padding: 64px 16px;
+    }
+
+    .why-buy-img {
+        opacity: 0.5;
+    }
+}
+
+@media (max-width: 768px) {
+    .specialized-services .wrapper {
+        flex-direction: column;
+    }
+
+    .specialized-services__right {
+        width: 100%;
+        min-width: 100%;
+        height: 343px;
+    }
+
+    .why-buy .order__accordion-arrow {
+        position: static;
+    }
+    
+    .why-buy .order__accordion-header {
+        flex-direction: row;
+    }
+
+    .why-buy .order__accordion-content p {
+        font-size: var(--font-size-16);
+    }
+}

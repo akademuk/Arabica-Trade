@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arabica Trade">
+
+    <title>Roasting Partner</title>
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="preload" as="image" href="images/roasting-partner-hero-800.webp" type="image/webp">
+    <link rel="stylesheet" href="styles/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles/aos.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/roasting-partner.css">
+
+
+    <style>
+        /* Hero */
+        .hero__background-img {
+            aspect-ratio: 1580 / 730;
+            overflow: hidden;
+        }
+
+        .hero {
+            padding: 10px 10px 0 10px;
+            width: 100%;
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--white-color);
+        }
+
+        .hero .wrapper{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero .wrapper .heading-primary {
+            text-transform: uppercase;
+        }
+
+        .hero__content-home {
+            max-width: 1216px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero__mark {
+            background: transparent;
+            color: var(--white-color);
+            font-family: var(--font-evolventa);
+            font-size: var(--font-size-20);
+        }
+
+        .hero-text {
+            max-width: 870px;
+            width: 100%;
+            margin: 0 auto;
+            color: var(--white-color);
+            text-align: center;
+            font-size: var(--font-size-25);
+        }
+
+        .hero__background {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: calc(100% - 20px);
+            height: calc(100% - 10px);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .hero__background::before {
+            content: "";
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%);
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .hero__background-img, .hero__background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: opacity 1s ease-in-out;
+            opacity: 1;
+        }
+
+        .hero__background-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero__background-video {
+            opacity: 0;
+        }
+
+        .hero__background-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero__background-video iframe {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .whot-hero-text {
+            max-width: 767px;
+            margin-top: 30px;
+            position: relative;
+        }
+
+        .whot-hero-text::before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            width: 270px;
+            height: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--white-color);
+        }
+
+        @media (max-width: 1200px)  {
+            .hero {
+                height: auto;
+                min-height: 430px;
+                padding: 150px 16px;
+            }
+
+            .heading-primary {
+                font-size: var(--font-size-50);
+            }
+
+            .hero__mark {
+                font-size: var(--font-size-16);
+                text-align: center;
+            }
+
+            .hero-text {
+                font-size: var(--font-size-16);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 539px;
+            }
+            .hero__background {
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="wrapper">
+            <div class="header__logo">
+                <a href="/">
+                    <img width="213" height="37" src="images/logo-white.svg" alt="ArabicaTrade Logotype">
+                </a>
+            </div>
+
+            <nav class="header__nav">
+                <ul class="header__menu">
+                    <li class="header__menu-item">
+                        <a href="#" class="header__menu-link">Offers</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#" class="header__menu-link">Origins</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#" class="header__menu-link">Services</a>
+                        <ul class="header__submenu">
+                            <li class="header__submenu-item">
+                                <a href="#" class="header__submenu-link">Green coffee</a>
+                            </li>
+                            <li class="header__submenu-item">
+                                <a href="#" class="header__submenu-link">Roasted coffee</a>
+                            </li>
+                            <li class="header__submenu-item">
+                                <a href="#" class="header__submenu-link">Equipment & Support</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#" class="header__menu-link">Contacts</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#" class="header__menu-link">About</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header__contact">
+                <button class="header__button request-call">Request a call</button>
+                <a href="#" class="header__icon">
+                    <img width="20" height="23" src="images/person.svg" alt="Account">
+                </a>
+                <a href="#" class="header__icon">
+                    <img width="25" height="25" src="images/bag.svg" alt="Shopping bag">
+                    <span class="header__value">0</span>
+                </a>
+                <div class="header__language">
+                    <label for="languageSelect" class="header__language-style" style="opacity: 0;">Choose your language:</label>
+                    <select id="languageSelect" class="header__select">
+                        <option value="en">En</option>
+                        <option value="fr">Fr</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="header__burger" aria-label="Open menu">
+                <span class="header__burger-lines"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <!-- Hero -->
+        <section class="hero" id="hero">
+            <div class="hero__background">
+                <div class="hero__background-img">
+                    <picture>
+                        <source 
+                            srcset="
+                                images/roasting-partner-hero-400.webp 400w,
+                                images/roasting-partner-hero-800.webp 800w,
+                                images/roasting-partner-hero-1580.webp 1580w
+                            "
+                            sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1580px"
+                            type="image/webp"
+                        >
+                        <source 
+                            srcset="
+                                images/roasting-partner-hero-400.jpg 400w,
+                                images/roasting-partner-hero-800.jpg 800w,
+                                images/roasting-partner-hero-1580.jpg 1580w
+                            "
+                            sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1580px"
+                            type="image/jpeg"
+                        >
+                        <img 
+                            src="images/roasting-partner-hero.jpg" 
+                            alt="Hero image" 
+                            width="1580" 
+                            height="730" 
+                        >
+                    </picture>
+                </div>
+
+                <div class="hero__background-video">
+                    <video src="images/02.mp4" autoplay muted playsinline loop></video>   
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="hero__content hero__content-home" data-aos="fade-up">
+                    <h1 class="heading-primary">Roasting Partner</h1>
+                    <p class="hero-text whot-hero-text">
+                        Coffee roasting is a blend of art and science, captured in the aroma of every cup. Starting with green beans, it transforms into a magical beverage with unique notes and warmth. With over a decade of experience and a wide range of equipment, we are ready to be your trusted partner in building a successful coffee roasting business, providing the resources and expertise you need
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specialized services of ARABICA TRADE -->
+        <section class="specialized-services" id="specializedServices">
+            <div class="wrapper">
+                <div class="specialized-services__left">
+                    <h2 class="heading-secondary">Specialized services of ARABICA TRADE</h2>
+                    <p class="paragraph">The business of coffee roasting undeniably requires effort and expertise, in which ARABICA TRADE will be the best and indispensable guide. Let’s consider some important aspects and how our team can assist</p>
+                </div>
+                <div class="specialized-services__right" data-aos="fade-up">
+                    <picture>
+                        <source srcset="images/specialized-services-img.webp" type="image/webp">
+                        <img loading="lazy" width="624" height="543" src="images/specialized-services-img.jpg"
+                            alt="image">
+                    </picture>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY BUY FROM US -->
+        <section class="why-buy" id="whyBuy">
+            <div class="wrapper">
+                <h2 class="heading-secondary">WHY BUY FROM US</h2>
+                <div class="order__accordion">
+                    <div class="order__accordion-item active">
+                        <div class="order__accordion-header">
+                            <span class="order__accordion-arrow">
+                                <img width="14" height="6" src="images/accardion-arrow.svg" alt="arrow">
+                            </span>
+                            <h3 class="order__accordion-title">Selection of green coffee</h3>
+                        </div>
+                        <div class="order__accordion-content">
+                            <p>
+                                In this business, having access to high-quality green coffee beans is crucial. Beans come from various regions and may possess different flavor characteristics. We are ready to provide a wide range of options and help you select the type that best suits your taste preferences. For your convenience, coffee can be purchased wholesale in Turkey, Azerbaijan, and Europe
+                            </p>
+                        </div>
+                    </div>
+                    <div class="order__accordion-item">
+                        <div class="order__accordion-header">
+                            <span class="order__accordion-arrow">
+                                <img width="14" height="6" src="images/accardion-arrow.svg" alt="arrow">
+                            </span>
+                            <h3 class="order__accordion-title">
+                                Analysis of the quality of beans and finished coffee products
+                            </h3>
+                        </div>
+                        <div class="order__accordion-content">
+                            <p>
+                                In this business, having access to high-quality green coffee beans is crucial. Beans come from various regions and may possess different flavor characteristics. We are ready to provide a wide range of options and help you select the type that best suits your taste preferences. For your convenience, coffee can be purchased wholesale in Turkey, Azerbaijan, and Europe
+                            </p>
+                        </div>
+                    </div>
+                    <div class="order__accordion-item">
+                        <div class="order__accordion-header">
+                            <span class="order__accordion-arrow">
+                                <img width="14" height="6" src="images/accardion-arrow.svg" alt="arrow">
+                            </span>
+                            <h3 class="order__accordion-title">
+                                Equipment and technical support
+                            </h3>
+                        </div>
+                        <div class="order__accordion-content">
+                            <p>
+                                In this business, having access to high-quality green coffee beans is crucial. Beans come from various regions and may possess different flavor characteristics. We are ready to provide a wide range of options and help you select the type that best suits your taste preferences. For your convenience, coffee can be purchased wholesale in Turkey, Azerbaijan, and Europe
+                            </p>
+                        </div>
+                    </div>
+                    <div class="order__accordion-item">
+                        <div class="order__accordion-header">
+                            <span class="order__accordion-arrow">
+                                <img width="14" height="6" src="images/accardion-arrow.svg" alt="arrow">
+                            </span>
+                            <h3 class="order__accordion-title">
+                                Roaster setup for coffee roasting
+                            </h3>
+                        </div>
+                        <div class="order__accordion-content">
+                            <p>
+                                In this business, having access to high-quality green coffee beans is crucial. Beans come from various regions and may possess different flavor characteristics. We are ready to provide a wide range of options and help you select the type that best suits your taste preferences. For your convenience, coffee can be purchased wholesale in Turkey, Azerbaijan, and Europe
+                            </p>
+                        </div>
+                    </div>
+                    <div class="order__accordion-item">
+                        <div class="order__accordion-header">
+                            <span class="order__accordion-arrow">
+                                <img width="14" height="6" src="images/accardion-arrow.svg" alt="arrow">
+                            </span>
+                            <h3 class="order__accordion-title">
+                                Creation of custom coffee blends
+                            </h3>
+                        </div>
+                        <div class="order__accordion-content">
+                            <p>
+                                In this business, having access to high-quality green coffee beans is crucial. Beans come from various regions and may possess different flavor characteristics. We are ready to provide a wide range of options and help you select the type that best suits your taste preferences. For your convenience, coffee can be purchased wholesale in Turkey, Azerbaijan, and Europe
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="why-buy-img">
+                <picture>
+                    <source srcset="images/why-buy-img.webp" type="image/webp">
+                    <img loading="lazy" width="521" height="462" src="images/why-buy-img.png"
+                        alt="image">
+                </picture>
+            </div>
+        </section>
+
+        <!-- ADVANTAGES OF COOPERATING WITH US -->
+        <section class="order collaboration roasting-partner" id="order">
+            <div class="wrapper">
+                <div class="order__box">
+                    <div class="order__accordion">
+                        <h2 class="heading-secondary">PARTNERSHIP</h2>
+                        <p class="paragraph">
+                            We aim to establish long-term partnerships based on mutual trust and success. Together with ARABICA TRADE, you can achieve outstanding results.
+                            So, if you dream of starting a coffee roasting business, ARABICA TRADE stands guard over your success. To commence our collaboration, please call us or submit a request on the website. Entrust us, and together we will turn your ambitions into reality. Provide coffee enthusiasts with an unforgettable aroma and exquisite taste. Welcome to a world of opportunities with ARABICA TRADE.
+                            To submit a request for business support services and equipment supply, please use the order form
+                        </p>
+                    </div>
+
+                    <div class="order__form" data-aos="fade-up">
+                        <h3>Get a quote</h3>
+                        <form class="send-form" method="post" style="width: 100%">
+                            <div class="col-4 p-15-all p-0 order__form-box">
+                                <label for="name" class="inputs-n1">Name & Surname</label>
+                                <input class="inputs-field" type="text" name="name" id="name" autocomplete="on"
+                                    required>
+                            </div>
+                            <div class="col-4 p-15-all p-0 order__form-box">
+                                <label for="businessname" class="inputs-n1">Business name</label>
+                                <input class="inputs-field" type="text" name="businessname" id="businessname"
+                                    autocomplete="on" required>
+                            </div>
+                            <div class="col-4 p-15-all media-phone p-0 order__form-box">
+                                <label for="email" class="inputs-n1">Email</label>
+                                <input class="inputs-field email" type="email" name="email" id="email"
+                                    autocomplete="off" required>
+                                <span class="valid-area-e"></span>
+                            </div>
+                            <div class="col-4 p-15-all media-phone p-0 order__form-box">
+                                <label for="tel" class="inputs-n1">Phone</label>
+                                <input class="inputs-field phone" type="tel" name="tel" id="tel" required>
+                                <span class="valid-area-p"></span>
+                            </div>
+                            <div class="col-4 p-15-all p-0 order__form-box">
+                                <label for="selected" class="inputs-n1">Not selected</label>
+                                <input class="inputs-field" type="text" name="selected" id="selected" autocomplete="on"
+                                    required>
+                            </div>
+                            <div class="col-12 p-15-all p-0 order__form-box order__form-textarea">
+                                <label for="message" class="inputs-n1">Your message</label>
+                                <textarea class="inputs-field" id="message" name="message" spellcheck="true"></textarea>
+                            </div>
+                            <div class="col-12 col-md-4 p-15-all p-0">
+                                <button class="submit-form button-style">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Banner form -->
+        <section class="banner-form" id="bannerForm">
+            <div class="wrapper">
+                <h2 class="heading-secondary">GREEN COFFEE IMPORTER FOR AZERBAIJAN, TURKEY AND EUROPE MARKET</h2>
+                <form class="send-form" method="post" style="width: 100%" data-aos="fade-up">
+                    <p class="banner-form__text">Once a week we send a digest with the most popular articles</p>
+                    <div class="col-4 p-15-all media-phone p-0 order__form-box">
+                        <label for="email3" class="visually-hidden">Email Address*</label>
+                        <input class="inputs-field email" id="email3" name="email" autocomplete="off" required
+                            placeholder="Email*">
+                        <span class="valid-area-e"></span>
+                    </div>
+                    <div class="col-12 col-md-4 p-15-all p-0">
+                        <button class="submit-form button-style">Subscribe</button>
+                    </div>
+                </form>
+
+            </div>
+            <div class="banner-form__img">
+                <picture>
+                    <source srcset="
+                            images/hero-img1-400.webp 400w,
+                            images/hero-img1-800.webp 800w,
+                            images/hero-img1-1580.webp 1580w
+                        " type="image/webp" sizes="(max-width: 400px) 100vw, (max-width: 800px) 100vw, 1580px">
+                    <source srcset="
+                            images/hero-img1-400.jpg 400w,
+                            images/hero-img1-800.jpg 800w,
+                            images/hero-img1-1580.jpg 1580w
+                        " type="image/jpeg" sizes="(max-width: 400px) 100vw, (max-width: 800px) 100vw, 1580px">
+                    <img src="images/hero-img1.jpg" alt="Hero image" width="1580" height="730" loading="eager" decoding="async">
+                </picture>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__top">
+                <div class="footer__top-logo">
+                    <a href="#">
+                        <img width="270" height="47" src="images/logo-black.svg" alt="Arabica Trade logo">
+                    </a>
+                </div>
+                <div class="footer__top-nav">
+                    <ul>
+                        <li><a href="#">Offers</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contacts</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+
+                    <ul>
+                        <li><a href="#">Offers</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contacts</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+
+                    <div class="footer__accordion">
+                        <p class="footer__accordion-title">Contacts</p>
+                        <div class="footer__accordion-item">
+                            <button class="footer__accordion-button">Türkiye</button>
+                            <div class="footer__accordion-collapse">
+                                <div class="footer__accordion-body">
+                                    <a href="#">+994 51 615 43 85</a>
+                                    <a href="#">+994 51 621 82 71</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer__accordion-item">
+                            <button class="footer__accordion-button">Azerbaijan</button>
+                            <div class="footer__accordion-collapse">
+                                <div class="footer__accordion-body">
+                                    <a href="#">+994 51 615 43 85</a>
+                                    <a href="#">+994 51 621 82 71</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer__accordion-item">
+                            <button class="footer__accordion-button">Europe</button>
+                            <div class="footer__accordion-collapse">
+                                <div class="footer__accordion-body">
+                                    <a href="#">+994 51 615 43 85</a>
+                                    <a href="#">+994 51 621 82 71</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="footer__top-social">
+                    <ul>
+                        <li>
+                            <a href="#" target="_blank">
+                                <img width="30" height="30" src="images/facebook.svg" alt="facebook icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <img width="30" height="30" src="images/inst.svg" alt="instagram icon">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__bottom-copyright">© 2024 Arabica Trade LLC</p>
+                <ul>
+                    <li>
+                        <a href="#" target="_blank">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">Public Offer Agreement</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed navigation -->
+    <div class="fixed-nav" data-aos="fade-left">
+        <button class="fixed-nav__btn button-style request-call">Request a call</button>
+        <a href="#" class="fixed-nav__link">View offers</a>
+    </div>
+
+    <!-- Burger Menu -->
+    <div class="overlay"></div>
+    <div class="mobile-menu">
+        <nav class="header__nav">
+            <ul class="header__menu">
+                <li class="header__menu-item">
+                    <a href="#" class="header__menu-link">Offers</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="#" class="header__menu-link">Origins</a>
+                </li>
+                <li class="header__menu-item">
+                    <span class="header__menu-link">Services</span>
+                    <ul class="header__submenu">
+                        <li class="header__submenu-item">
+                            <a href="#" class="header__submenu-link">Green coffee</a>
+                        </li>
+                        <li class="header__submenu-item">
+                            <a href="#" class="header__submenu-link">Roasted coffee</a>
+                        </li>
+                        <li class="header__submenu-item">
+                            <a href="#" class="header__submenu-link">Equipment & Support</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header__menu-item">
+                    <a href="#" class="header__menu-link">Contacts</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="#" class="header__menu-link">About</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header__contact">
+            <a href="/" class="header__button request-call">Request a call</a>
+            <a href="#" class="header__icon">
+                <img width="20" height="23" src="images/person.svg" alt="Account">
+            </a>
+            <a href="#" class="header__icon">
+                <img width="25" height="25" src="images/bag.svg" alt="Shopping bag">
+                <span class="header__value">0</span>
+            </a>
+            <div class="header__language">
+                <label for="languageSelect2" class="header__language-style" style="opacity: 0;">Choose your language:</label>
+                <select id="languageSelect2" class="header__select">
+                  <option value="en">En</option>
+                  <option value="fr">Fr</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup Modal Request a Call-->
+    <div id="requestCallModal" class="popup-modal">
+        <div class="popup-modal__content">
+            <span class="popup-modal__close">&times;</span>
+            <h2>Request a Call</h2>
+            <form class="send-form" id="requestCallForm" method="post" style="width: 100%">
+                <div class="col-4 p-15-all p-0 order__form-box">
+                    <label for="name2" class="inputs-n1">Name &amp; Surname</label>
+                    <input class="inputs-field" type="text" name="name" id="name2" autocomplete="on" required="">
+                </div>
+                <div class="col-4 p-15-all media-phone p-0 order__form-box">
+                    <label for="email2" class="inputs-n1">Email</label>
+                    <input class="inputs-field email" type="email" name="email" id="email2" autocomplete="off" required="">
+                    <span class="valid-area-e"></span>
+                </div>
+                <div class="col-4 p-15-all media-phone p-0 order__form-box">
+                    <label for="tel2" class="inputs-n1">Phone</label>
+                    <input class="inputs-field phone" type="tel" name="tel" id="tel2" required="">
+                    <span class="valid-area-p"></span>
+                </div>
+                <div class="col-12 col-md-4 p-15-all p-0">
+                    <button class="submit-form">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts/jquery-3.7.0.min.js"></script>
+    <script src="scripts/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="scripts/main.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: false,  
+            mirror: true,
+        });
+    </script>
+</body>
+
+</html>
