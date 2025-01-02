@@ -399,6 +399,15 @@ body.modal-open {
     color: var(--black-color);
 }
 
+.header-black .header__burger-lines {
+    background: var(--black-color);
+}
+
+.header-black .header__burger-lines::before,
+.header-black .header__burger-lines::after {
+    background: var(--black-color);
+} 
+
 
 /* Fixed navigation */
 .fixed-nav {
