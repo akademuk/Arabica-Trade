@@ -56,6 +56,10 @@ body.modal-open {
     overflow: hidden;
 }
 
+button, a {
+    font-family: var(--font-evolventa), Arial, Helvetica, sans-serif;
+}
+
 /* Mobile menu */
 .overlay {
     position: fixed;
@@ -541,6 +545,11 @@ body.modal-open {
     width: 100%;
     height: 8px;
     display: flex;
+    transition: all 0.4s;
+}
+
+.we-offer__box-link:hover::after {
+    transform: translateX(20px);
 }
 
 .we-offer__box-card.expanded .we-offer__box-link {

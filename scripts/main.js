@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initRequestCallPopup();
     initReadMoreFeature();
     initExpandableBlocks();
+    initializeFilterPopup();
 });
 
 // Home
@@ -436,6 +437,7 @@ function initReadMoreFeature() {
     });
 }
 
+// Green coffee
 function initExpandableBlocks() {
     const blocks = document.querySelectorAll('.guide__item');
 
@@ -468,5 +470,33 @@ function initExpandableBlocks() {
     }
 }
 
+// Offer lists
+function initializeFilterPopup() {
+    const filterButton = document.getElementById('filter');
+    const popupOverlay = document.getElementById('filterPopup');
+    const closePopupButton = document.getElementById('close-filterPopup');
+
+    if (!filterButton || !popupOverlay || !closePopupButton) {
+        return;
+    }
+
+    const openPopup = () => {
+        popupOverlay.style.display = 'block';
+        document.body.classList.add('no-scroll');
+    };
+
+    const closePopup = () => {
+        popupOverlay.style.display = 'none';
+        document.body.classList.remove('no-scroll'); 
+    };
+
+    filterButton.addEventListener('click', openPopup);
+    closePopupButton.addEventListener('click', closePopup);
+    popupOverlay.addEventListener('click', (event) => {
+        if (event.target === popupOverlay) {
+            closePopup();
+        }
+    });
+}
 
 

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arabica Trade">
+
+    <title>Offer lists</title>
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/aos.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/offer-lists.css">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header header-black">
+        <div class="wrapper">
+            <div class="header__logo">
+                <a href="/">
+                    <img width="213" height="37" src="images/logo-white.svg" alt="ArabicaTrade Logotype">
+                </a>
+            </div>
+
+            <nav class="header__nav">
+                <ul class="header__menu">
+                    <li class="header__menu-item">
+                        <a href="#" class="header__menu-link">Offers</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#" class="header__menu-link">Origins</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#" class="header__menu-link">Services</a>
+                        <ul class="header__submenu">
+                            <li class="header__submenu-item">
+                                <a href="#" class="header__submenu-link">Green coffee</a>
+                            </li>
+                            <li class="header__submenu-item">
+                                <a href="#" class="header__submenu-link">Roasted coffee</a>
+                            </li>
+                            <li class="header__submenu-item">
+                                <a href="#" class="header__submenu-link">Equipment & Support</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#" class="header__menu-link">Contacts</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#" class="header__menu-link">About</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header__contact">
+                <button class="header__button request-call">Request a call</button>
+                <a href="#" class="header__icon">
+                    <img width="20" height="23" src="images/person.svg" alt="Account">
+                </a>
+                <a href="#" class="header__icon">
+                    <img width="25" height="25" src="images/bag.svg" alt="Shopping bag">
+                    <span class="header__value">0</span>
+                </a>
+                <div class="header__language">
+                    <label for="languageSelect" class="header__language-style" style="opacity: 0;">Choose your language:</label>
+                    <select id="languageSelect" class="header__select">
+                        <option value="en">En</option>
+                        <option value="fr">Fr</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="header__burger" aria-label="Open menu">
+                <span class="header__burger-lines"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <!-- Offer lists -->
+        <section class="offer-lists">
+            <div class="wrapper">
+                <div class="offer-lists__header">
+                    <h1 class="heading-secondary">Offer lists</h1>
+                    <div class="offer-lists__header-box">
+                        <button class="offer-lists__filter" id="filter">Filter
+                            <img width="17" height="18" src="images/filter.svg" alt="icons">
+                        </button>
+                        <button class="offer-lists__download" id="download">Download filtered list
+                            <img width="20" height="20" src="images/Download.svg" alt="icons">
+                        </button>
+                    </div>
+                </div>
+                <div class="offer-lists__main">
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__top">
+                <div class="footer__top-logo">
+                    <a href="#">
+                        <img width="270" height="47" src="images/logo-black.svg" alt="Arabica Trade logo">
+                    </a>
+                </div>
+                <div class="footer__top-nav">
+                    <ul>
+                        <li><a href="#">Offers</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contacts</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+
+                    <ul>
+                        <li><a href="#">Offers</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contacts</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+
+                    <div class="footer__accordion">
+                        <p class="footer__accordion-title">Contacts</p>
+                        <div class="footer__accordion-item">
+                            <button class="footer__accordion-button">Türkiye</button>
+                            <div class="footer__accordion-collapse">
+                                <div class="footer__accordion-body">
+                                    <a href="#">+994 51 615 43 85</a>
+                                    <a href="#">+994 51 621 82 71</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer__accordion-item">
+                            <button class="footer__accordion-button">Azerbaijan</button>
+                            <div class="footer__accordion-collapse">
+                                <div class="footer__accordion-body">
+                                    <a href="#">+994 51 615 43 85</a>
+                                    <a href="#">+994 51 621 82 71</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer__accordion-item">
+                            <button class="footer__accordion-button">Europe</button>
+                            <div class="footer__accordion-collapse">
+                                <div class="footer__accordion-body">
+                                    <a href="#">+994 51 615 43 85</a>
+                                    <a href="#">+994 51 621 82 71</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="footer__top-social">
+                    <ul>
+                        <li>
+                            <a href="#" target="_blank">
+                                <img width="30" height="30" src="images/facebook.svg" alt="facebook icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <img width="30" height="30" src="images/inst.svg" alt="instagram icon">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__bottom-copyright">© 2024 Arabica Trade LLC</p>
+                <ul>
+                    <li>
+                        <a href="#" target="_blank">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">Public Offer Agreement</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed navigation -->
+    <div class="fixed-nav" data-aos="fade-left">
+        <button class="fixed-nav__btn button-style request-call">Request a call</button>
+        <a href="#" class="fixed-nav__link">View offers</a>
+    </div>
+
+    <!-- Burger Menu -->
+    <div class="overlay"></div>
+    <div class="mobile-menu">
+        <nav class="header__nav">
+            <ul class="header__menu">
+                <li class="header__menu-item">
+                    <a href="#" class="header__menu-link">Offers</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="#" class="header__menu-link">Origins</a>
+                </li>
+                <li class="header__menu-item">
+                    <span class="header__menu-link">Services</span>
+                    <ul class="header__submenu">
+                        <li class="header__submenu-item">
+                            <a href="#" class="header__submenu-link">Green coffee</a>
+                        </li>
+                        <li class="header__submenu-item">
+                            <a href="#" class="header__submenu-link">Roasted coffee</a>
+                        </li>
+                        <li class="header__submenu-item">
+                            <a href="#" class="header__submenu-link">Equipment & Support</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header__menu-item">
+                    <a href="#" class="header__menu-link">Contacts</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="#" class="header__menu-link">About</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header__contact">
+            <a href="/" class="header__button request-call">Request a call</a>
+            <a href="#" class="header__icon">
+                <img width="20" height="23" src="images/person.svg" alt="Account">
+            </a>
+            <a href="#" class="header__icon">
+                <img width="25" height="25" src="images/bag.svg" alt="Shopping bag">
+                <span class="header__value">0</span>
+            </a>
+            <div class="header__language">
+                <label for="languageSelect2" class="header__language-style" style="opacity: 0;">Choose your language:</label>
+                <select id="languageSelect2" class="header__select">
+                  <option value="en">En</option>
+                  <option value="fr">Fr</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup Modal Request a Call-->
+    <div id="requestCallModal" class="popup-modal">
+        <div class="popup-modal__content">
+            <span class="popup-modal__close">&times;</span>
+            <h2>Request a Call</h2>
+            <form class="send-form" id="requestCallForm" method="post" style="width: 100%">
+                <div class="col-4 p-15-all p-0 order__form-box">
+                    <label for="name2" class="inputs-n1">Name &amp; Surname</label>
+                    <input class="inputs-field" type="text" name="name" id="name2" autocomplete="on" required="">
+                </div>
+                <div class="col-4 p-15-all media-phone p-0 order__form-box">
+                    <label for="email2" class="inputs-n1">Email</label>
+                    <input class="inputs-field email" type="email" name="email" id="email2" autocomplete="off" required="">
+                    <span class="valid-area-e"></span>
+                </div>
+                <div class="col-4 p-15-all media-phone p-0 order__form-box">
+                    <label for="tel2" class="inputs-n1">Phone</label>
+                    <input class="inputs-field phone" type="tel" name="tel" id="tel2" required="">
+                    <span class="valid-area-p"></span>
+                </div>
+                <div class="col-12 col-md-4 p-15-all p-0">
+                    <button class="submit-form">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Popup Filter-->
+    <div class="filterPopup" id="filterPopup">
+        <div class="filterPopup-content">
+            <div class="filterPopup-overflow">
+                <div class="filterPopup-col">
+                    <p class="filterPopup-title">BY COUNTRY</p>
+                    <ul class="filterPopup-list filterPopup-list1">
+                        <li>All</li>
+                        <li>Costa Rica</li>
+                        <li>Ethiopia</li>
+                        <li>India</li>
+                        <li>Nicaragua</li>
+                        <li>Uganda</li>
+                        <li>Peru</li>
+                        <li>Kenya</li>
+                        <li>Mexico</li>
+                        <li>Colombia</li>
+                        <li>Guatemala</li>
+                        <li>Brazil</li>
+                        <li>Salvador</li>
+                        <li>Honduras</li>
+                    </ul>
+                </div>
+
+                <div class="filterPopup-col">
+                    <p class="filterPopup-title">BY PROCESS</p>
+                    <ul class="filterPopup-list filterPopup-list2">
+                        <li>Washed</li>
+                        <li>Natural</li>
+                        <li>Fully Washed</li>
+                        <li>Wet Hulled</li>
+                        <li>Honey</li>
+                        <li>Anerobic Natural</li>
+                        <li>Honey / Pulped Natural</li>
+                        <li>Pulped Natural</li>
+                    </ul>
+                </div>
+
+                <div class="filterPopup-col">
+                    <p class="filterPopup-title">OTHER</p>
+                    <ul class="filterPopup-list filterPopup-list3">
+                        <li>Decaf</li>
+                        <li>Certified</li>
+                    </ul>
+                </div>
+
+                <div class="filterPopup-col filterPopup-col-btn">
+                    <button class="filterPopup-reset">Reset</button>
+                    <button class="filterPopup-apply">Apply</button>
+                </div>
+            </div>
+            <button id="close-filterPopup" class="close-filterPopup">
+                <img width="25" height="25" src="images/close.svg" alt="close">
+            </button>
+        </div>
+    </div>
+
+    <script src="scripts/jquery-3.7.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="scripts/main.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: false,  
+            mirror: true,
+        });
+    </script>
+</body>
+
+</html>
