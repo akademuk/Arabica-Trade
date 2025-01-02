@@ -200,20 +200,10 @@ function initDynamicHoverEffect() {
         }
     };
 
-    document.addEventListener("mouseover", (event) => {
-        if (window.innerWidth >= 1200) {
-            handleHover(event.target, "add");
-        }
-    });
 
-    document.addEventListener("mouseout", (event) => {
-        if (window.innerWidth >= 1200) {
-            handleHover(event.target, "remove");
-        }
-    });
 
     document.addEventListener("click", (event) => {
-        if (window.innerWidth < 1200) {
+        if (window.innerWidth < 3200) {
             const target = event.target;
             if (target.id?.startsWith("mapsImg")) {
                 const idNumber = target.id.replace("mapsImg", "");
@@ -344,18 +334,30 @@ function initSmoothScroll() {
 function initRequestCallPopup() {
     const modal = document.getElementById("requestCallModal");
     const closeBtn = modal.querySelector(".popup-modal__close");
+    const modalContent = modal.querySelector(".popup-modal__content");
     const requestButtons = document.querySelectorAll(".request-call");
 
-    if (!modal || !requestButtons.length) return;
+    if (!modal || !requestButtons.length || !modalContent) return;
 
     const openModal = () => {
         modal.style.display = "flex";
         document.body.style.overflow = "hidden";
+
+        // Добавляем класс для анимации
+        setTimeout(() => {
+            modalContent.classList.add("show");
+        }, 0); // Небольшая задержка для корректной работы transition
     };
 
     const closeModal = () => {
-        modal.style.display = "none";
-        document.body.style.overflow = "";
+        // Удаляем класс для анимации
+        modalContent.classList.remove("show");
+
+        // Ждем завершения анимации перед скрытием модального окна
+        setTimeout(() => {
+            modal.style.display = "none";
+            document.body.style.overflow = "";
+        }, 300); // Длительность transition в CSS
     };
 
     requestButtons.forEach((button) => {
@@ -375,6 +377,7 @@ function initRequestCallPopup() {
         if (event.key === "Escape") closeModal();
     });
 }
+
 
 // WHAT WE DO
 const swiperContainer = document.querySelector('.swiper-container');

@@ -57,6 +57,11 @@
 .order__contact-list-text a {
     color: var(--black-color);
     text-decoration: none;
+    transition: all 0.4s;
+}
+
+.order__contact-list-text a:hover {
+    color: var(--button-bg);
 }
 
 .order__contact-list-text2 {

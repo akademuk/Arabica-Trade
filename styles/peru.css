@@ -115,9 +115,18 @@
     z-index: 2;
 }
 
+.full-slider__navigation .swiper-button-prev,
+.full-slider__navigation .swiper-button-next {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--white-color);
+}
+
 .full-slider__navigation .swiper-button-prev::after,
 .full-slider__navigation .swiper-button-next::after {
-    color: var(--white-color);
+    color: var(--black-color);
+    font-size: var(--font-size-25);
 }
 
 @media (max-width: 1200px) {

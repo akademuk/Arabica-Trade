@@ -83,6 +83,13 @@
     height: 100%;
 }
 
+
+.freshly__img video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .freshly__img::after {
     content: "";
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%);

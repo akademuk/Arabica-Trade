@@ -576,6 +576,11 @@
         background-size: auto;
         background-position: center;
         display: flex;
+        transition: all 0.4s;
+    }
+
+    .fixed-nav__link:hover::after  {
+        transform: translate(20px);
     }
 
     /* We offer */
@@ -613,6 +618,7 @@
         transition: all 0.4s ease-in-out;
         position: relative;
         cursor: pointer;
+        border: 1px solid transparent;
     }
 
     .we-offer__img {
@@ -1033,7 +1039,7 @@
 
     .footer__top-nav {
         display: flex;
-        gap: 32px;
+        gap: 69px;
     }
 
     .footer__top-nav ul {
@@ -1046,6 +1052,11 @@
         color: var(--black-color);
         font-size: var(--font-size-18);
         text-decoration: none;
+        transition: all 0.4s;
+    }
+
+    .footer__top-nav ul li a:hover {
+        color: var(--button-bg);
     }
 
     .footer__accordion {
@@ -1067,7 +1078,11 @@
         width: 14px;
         height: 5px;
         display: flex;
-        transition: transform 0.4s ease;
+        transition: transform 0.4s;
+    }
+
+    .footer__accordion-button:hover {
+        color: var(--button-bg);
     }
 
     .footer__accordion-button {
@@ -1079,6 +1094,7 @@
         color: var(--black-color);
         font-size: var(--font-size-18);
         padding: 0;
+        transition: all 0.4s;
     }
 
     .footer__accordion-item {
@@ -1141,10 +1157,19 @@
         gap: 50px;
     }
 
+    .footer__top-social a:hover img{
+        filter: brightness(0) saturate(100%) invert(41%) sepia(33%) saturate(396%) hue-rotate(38deg) brightness(92%) contrast(92%);
+    }
+
     .footer__bottom ul li a {
         color: var(--black-color);
         text-decoration: none;
         font-size: var(--font-size-15);
+        transition: all 0.4s;
+    }
+
+    .footer__bottom ul li a:hover {
+        color: var(--button-bg);
     }
 
     .footer__bottom-copyright {
@@ -1165,6 +1190,18 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .popup-modal__content {
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    
+    .popup-modal__content.show {
+        transition-delay: 0.5s;
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .popup-modal__close {
