@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initReadMoreFeature();
     initExpandableBlocks();
     initializeFilterPopup();
+    initOfferAccordion()
 });
 
 // Home
@@ -502,4 +503,41 @@ function initializeFilterPopup() {
     });
 }
 
+// Offer lists
+function initOfferAccordion() {
+    const detailButtons = document.querySelectorAll('.more-detail');
+    if (!detailButtons.length) return;
 
+    detailButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const offer = this.closest('.offer');
+            const details = offer.querySelector('.product-details');
+            const main = offer.querySelector('.offer-main');
+
+            details.classList.toggle('expanded');
+
+            main.classList.toggle('expanded');
+        });
+    });
+
+    const quantityControls = document.querySelectorAll('.quantity-control');
+    if (!quantityControls.length) return;
+
+    quantityControls.forEach(control => {
+        const input = control.querySelector('.quantity');
+        const decreaseButton = control.querySelector('.decrease');
+        const increaseButton = control.querySelector('.increase');
+
+        decreaseButton.addEventListener('click', () => {
+            let value = parseInt(input.value);
+            if (value > 1) {
+                input.value = value - 1;
+            }
+        });
+
+        increaseButton.addEventListener('click', () => {
+            let value = parseInt(input.value);
+            input.value = value + 1;
+        });
+    });
+}
