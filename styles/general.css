@@ -581,7 +581,7 @@
     }
 
     .fixed-nav__link:hover::after  {
-        transform: translate(20px);
+        transform: translate(10px);
     }
 
     /* We offer */

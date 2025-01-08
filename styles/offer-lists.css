@@ -38,10 +38,12 @@
     border-radius: 3px;
     border: 1px solid var(--black-color);
     background: transparent;
+    transition: all 0.4s;
     text-decoration: none;
 }
 
 .offer-lists__header-box button:hover {
+    transition: all 0.4s;
     background: var(--button-bg);
     color: var(--white-color);
     border: 1px solid transparent;
@@ -81,7 +83,7 @@
 
 .offer-main {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     padding: 0 0 0 10px;
     gap: 15px;
     transition: all 0.4s;
@@ -94,6 +96,7 @@
 
 .offer-header__box1 {
     width: 83px;
+    cursor: pointer;
 }
 
 .offer-header__box2 {
@@ -106,10 +109,12 @@
 
 .offer-header__box4 {
     width: 89px;
+    cursor: pointer;
 }
 
 .offer-header__box5 {
     width: 72px;
+    cursor: pointer;
 }
 
 .offer-header__box6 {
@@ -118,10 +123,12 @@
 
 .offer-header__box7 {
     width: 53px;
+    cursor: pointer;
 }
 
 .offer-header__box8 {
     width: 100px;
+    cursor: pointer;
 }
 
 .offer-main .actions {
@@ -134,7 +141,7 @@
 .offer-lists__main {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 0;
     width: 100%;
     overflow: hidden;
 }
@@ -221,6 +228,10 @@ input[type="number"]::-webkit-outer-spin-button {
     gap: 3px;
     cursor: pointer;
     transition: all 0.4s;
+}
+
+.more-detail img {
+    margin-top: 2px;
 }
 
 .more-detail:hover {
@@ -414,31 +425,49 @@ input[type="number"]::-webkit-outer-spin-button {
     color: var(--button-bg);
 }
 
+.toggle-switch {
+    display: none;
+}
+
 @media (max-width: 1200px) {
     .filterPopup-col {
         width: calc(50% - 16px);
+    }
+
+    .offer-lists__main-scroll {
+        width: auto;
+        overflow: auto;
     }
 
     .offer-lists {
         padding: 100px 16px 64px 16px;
     }
 
-    .offer-overflow {
-        width: 1170px;
-        max-width: 100%;
-        overflow-x: auto;
-        overflow-y: hidden;
+    .offer-lists__main {
+        width: auto;
+        overflow: auto;
     }
 
-    .offer {
-        width: 1170px;
-        overflow: scroll;
+    .offer-lists .wrapper {
+        width: 100%;
+        overflow: hidden;
     }
+
+    .offer-lists__main {
+        width: 1170px;
+        overflow: auto;
+    }
+
+
 }
 
 @media (max-width: 768px) {
     .filterPopup-col {
         width: 100%;
+    }
+
+    .offer-lists__main {
+        width: auto;
     }
 
     .offer-lists__header-box {
@@ -447,5 +476,285 @@ input[type="number"]::-webkit-outer-spin-button {
 
     .filterPopup-content {
         padding: 32px 16px;
+    }
+
+    .offer {
+        width: auto;
+        min-width: 400px;
+    }
+
+    .offer.active {
+        width: 998px;
+    }
+
+    .toggle-switch {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 188px;
+        height: 41px;
+    }
+    
+    .toggle-switch label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 10px 11px;
+    }
+    
+    .toggle-switch input {
+        display: none;
+    }
+    
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #616E46;
+        border-radius: 30px;
+        transition: 0.4s;
+    }
+    
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 33px;
+        width: 33px;
+        left: 8px;
+        bottom: 4px;
+        background-color: #D1D4CC;
+        border-radius: 50%;
+        transition: 0.4s;
+    }
+    
+    input:checked + .slider {
+        background-color: #D1D4CC;
+    }
+    
+    input:checked + .slider:before {
+        transform: translateX(140px);
+        background: #616E46;
+    }
+
+    .toggle-label.active {
+        margin-left: auto;
+        color: #fff;
+        margin-right: 10px;
+    }
+    
+    .offer-main .actions {
+        margin-left: 0;
+    }
+
+    .toggle-label {
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        position: relative;
+        z-index: 4;
+        margin-right: auto;
+        margin-left: 10px;
+        color: #000;
+    }
+
+    .offer-lists__header {
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .offer-lists__header-box {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .offer-lists__header-box button, .offer-lists__header-box a {
+        font-size: 15px;
+    }
+
+    .offer-header__title {
+        font-size: 11px;
+    }
+
+    .offer-main__text {
+        font-size: 10px;
+    }
+
+    .offer-header__box1 {
+        width: 18%;
+    }
+
+    .offer-header__box2 {
+        width: 16%;
+    }
+
+    .offer-header__box3 {
+        width: 19%;
+    }
+
+    .offer-header__box7 {
+        width: 13%;
+
+    }
+
+    .offer-main .actions {
+        width: 34%;
+    }
+    
+
+    .offer-main .actions .quantity-control {
+        padding: 13px 36px 12px 36px;
+        gap: 10px;
+    }
+
+    .offer-header__box6 {
+        width: 80px;
+    }
+
+    .offer-header  .offer-header__box6  {
+        white-space: nowrap;
+    }
+    
+    .offer-header__box10 {
+        width: 34%;
+    }
+
+    .offer-header__box9 {
+        width: 68px;
+        min-width: 68px;
+    }
+    /* .offer-header {
+        justify-content: space-between;
+        padding-right: 37% !important;
+    } */
+
+    .offer-main .actions .quantity-control input {
+        width: 12px;
+        font-size: 9px;
+    }
+
+    .actions .button-add img {
+        width: 10.449px;
+        height: 10px;
+    }
+
+    .offer-header {
+        gap: 12px;
+        height: 49px;
+    }
+
+    .offer-lists__header {
+        padding: 0 16px;
+    }
+
+    .offer-lists {
+        padding: 100px 0 64px 0;
+    }
+
+    .offer-main {
+        gap: 12px;
+    }
+
+    .offer-header {
+        padding: 0 20px;
+    }
+
+    .offer-main {
+        padding:  0 0 0 20px;
+    }
+
+    .offer-main__text {
+        padding: 10px 0;
+    }
+
+    .actions .button-add {
+        font-size: 9px;
+        white-space: nowrap;
+    }
+
+    .button-request {
+        font-size: 9px;
+    }
+
+    .offer-header__box4 {
+        width: 64px;
+        min-width: 64px;
+    }
+
+    .offer-header__box5 {
+        width: 52px;
+        min-width: 52px;
+    }
+
+    .more-detail {
+        font-size: 10px;
+    }
+
+    .more-detail img {
+        width: 10px;
+        height: 10px;
+        margin-top: 0;
+    }
+
+    .product-details {
+        gap: 12px;
+    }
+
+    .product-details.expanded {
+        padding: 10px;
+    }
+
+    .details-row__title {
+        font-size: 11px;
+    }
+
+    .details-row__text {
+        font-size: 10px;
+    }
+
+    .comunity-page {
+        width: max-content;
+        font-size: 10px;
+        min-width: auto;
+        white-space: nowrap;
+        gap: 10px;
+    }
+
+    .offer-lists__header {
+        flex-direction: column;
+    }
+
+    .offer.active .offer-header__box1{
+        width: 83px;
+    }
+
+    .offer.active .offer-header__box2{
+        width: 104px;
+    }
+
+    .offer.active .offer-header__box3{
+        width: 101px;
+    }
+
+    .offer.active .offer-header__box7{
+        width: 53px;
+    }
+
+    .offer.active .offer-header__box10{
+        width: 165px;
+    }
+
+    .offer.active .offer-header__box9{
+        width: 68px;
+    }
+
+    .offer.active .actions {
+        width: 165px;
     }
 }

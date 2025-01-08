@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
     initReadMoreFeature();
     initExpandableBlocks();
     initializeFilterPopup();
-    initOfferAccordion()
+    initOfferAccordion();
+    initToggleSwitch()
 });
 
 // Home
@@ -540,4 +541,77 @@ function initOfferAccordion() {
             input.value = value + 1;
         });
     });
+}
+
+// Offer lists
+function initToggleSwitch() {
+    const toggleCheckbox = document.getElementById("toggle-checkbox");
+    const toggleLabel = document.getElementById("toggle-label");
+    const elementsToToggle = document.querySelectorAll(".offer-header__none");
+    const offerContainers = document.querySelectorAll(".offer");
+
+    if (!toggleCheckbox || !toggleLabel || elementsToToggle.length === 0 || offerContainers.length === 0) {
+        return;
+    }
+
+    // Функция для проверки ширины экрана
+    function isMobileScreen() {
+        return window.innerWidth < 768;
+    }
+
+    // Функция для обновления состояния
+    function updateState() {
+        if (isMobileScreen()) {
+            // Если экран меньше 768px
+            elementsToToggle.forEach((element) => {
+                element.style.display = toggleCheckbox.checked ? "flex" : "none";
+            });
+            offerContainers.forEach((offer) => {
+                if (toggleCheckbox.checked) {
+                    offer.classList.add("active");
+                } else {
+                    offer.classList.remove("active");
+                }
+            });
+        } else {
+            // Если экран больше 768px
+            elementsToToggle.forEach((element) => {
+                element.style.display = ""; // Сбрасываем стиль
+            });
+            offerContainers.forEach((offer) => {
+                offer.classList.remove("active"); // Убираем класс active
+            });
+        }
+    }
+
+    // Обработчик для переключателя
+    function handleToggle() {
+        if (isMobileScreen()) {
+            elementsToToggle.forEach((element) => {
+                element.style.display = toggleCheckbox.checked ? "flex" : "none";
+            });
+            offerContainers.forEach((offer) => {
+                if (toggleCheckbox.checked) {
+                    offer.classList.add("active");
+                } else {
+                    offer.classList.remove("active");
+                }
+            });
+
+            toggleLabel.textContent = toggleCheckbox.checked ? "Condensed view" : "Expanded view";
+
+            if (!toggleCheckbox.checked) {
+                toggleLabel.classList.add("active");
+            } else {
+                toggleLabel.classList.remove("active");
+            }
+        }
+    }
+
+    // Слушаем события изменения чекбокса и изменения размера окна
+    toggleCheckbox.addEventListener("change", handleToggle);
+    window.addEventListener("resize", updateState);
+
+    // Изначально обновляем состояние
+    updateState();
 }
