@@ -30,10 +30,10 @@
 
 .coffee-origins__location {
     width: 135px;
-    height: 150px;
-    background: url(../images/cardmap.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
+    height: auto;
+    background: var(--white-color);
+    border-radius: 3px;
+    border: 1px solid var(--black-color);
     padding: 8px 10px;
     display: flex;
     flex-direction: column;
@@ -41,6 +41,20 @@
     position: absolute;
     opacity: 0;
     transition: opacity 0.4s;
+}
+
+.coffee-origins__location::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: var(--white-color);
+    border: 1px solid var(--black-color);
+    border-left: 1px solid transparent;
+    border-top: 1px solid transparent;
+    transform: translateX(-50%) rotate(45deg);
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
 }
 
 .coffee-origins__location-title {
@@ -53,38 +67,52 @@
 .coffee-origins__location-list {
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    gap: 12px;
 }
 
 .coffee-origins__location-list li {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 5px;
-    font-size: var(--font-size-10);
+    font-size: var(--font-size-14);
     line-height: 110%;
 }
 
 .coffee-origins__location-list img {
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
 }
 
 .coffee-origins__location-text {
     text-align: center;
-    font-size: var(--font-size-10);
+    font-size: var(--font-size-14);
     line-height: 110%;
     padding: 0 6px;
+    text-decoration: none;
+    color: var(--black-color);
+    transition: all 0.4s;
+}
+
+.coffee-origins__location-text:hover {
+    color: var(--button-bg);
+    transition: all 0.4s;
 }
 
 .coffee-origins__location1 {
-    bottom: 175px;
-    left: 275px;
+    bottom: 180px;
+    left: 285px;
     z-index: -1;
 }
 
 .coffee-origins__location2 {
     bottom: 275px;
     right: 265px;
+    z-index: -1;
+}
+
+.coffee-origins__location3 {
+    bottom: 185px;
+    left: 200px;
     z-index: -1;
 }
 
@@ -303,6 +331,15 @@
     object-fit: cover;
 }
 
+.news__article .news__article-content a{
+    font-size: var(--font-size-30);
+    font-weight: 700;
+    line-height: 110%;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--black-color);
+}
+
 .news__article-content {
     display: flex;
     flex-direction: column;
@@ -431,6 +468,17 @@
 
     .news__article-img {
         width: 100%;
+    }
+
+    .coffee-origins__location3 {
+        bottom: 200px;
+    }
+
+    .coffee-origins__location1 {
+        bottom: 203px;
+    }
+    .coffee-origins__location2 {
+        bottom: 300px;
     }
 }
 

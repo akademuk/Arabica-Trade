@@ -27,6 +27,7 @@
         --black-color: #000;
         --button-bg: #616E46;
         --background: #D1D4CC;
+        --error: #FF836D;
         --font-evolventa: "Evolventa", sans-serif;
         --font-size-10: 10px;
         --font-size-14: 14px;
@@ -279,6 +280,7 @@
     .header__menu-link {
         color: var(--white-color);
         text-decoration: none;
+        transition: all 0.4s;
     }
 
     .header__contact {
@@ -358,6 +360,7 @@
         align-items: center;
         gap: 5px;
         cursor: pointer;
+        transition: all 0.4s;
     }
 
     .header__language-text img {
@@ -750,6 +753,13 @@
         position: relative;
     }
 
+    .banner-form .error {
+        color: var(--error);
+        font-family: "Evolventa";
+        font-size: var(--font-size-15);
+        line-height: 120%;
+    }
+
     .banner-form .wrapper {
         max-width: 1170px;
         width: 100%;
@@ -883,7 +893,6 @@
     .order__form {
         display: flex;
         width: 420px;
-        height: 503px;
         padding: 25px;
         flex-direction: column;
         justify-content: center;
@@ -893,6 +902,12 @@
         border-radius: 3px;
         background: var(--button-bg);
         border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .error {
+        font-size: var(--font-size-14);
+        color:var(--white-color);
+        padding: 5px 0 0 0;
     }
 
     .order__form h3 {
@@ -973,7 +988,8 @@
         gap: 10px;
     }
 
-    .order__form form .form-group {
+
+    .order__form form .form-group input {
         border-radius: 5px;
         border: 1px solid rgba(255, 255, 255, 0.5);
         height: 40px;
@@ -984,8 +1000,29 @@
         line-height: 120%;
     }
 
+    .order__form form .form-group select {
+        border-radius: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        height: 40px;
+        padding: 11px 14px;
+        background: transparent;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: var(--font-size-15);
+        line-height: 120%;
+    }
+
+
+
     .form-group textarea {
+        border-radius: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 11px 14px;
+        background: transparent;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: var(--font-size-15);
+        line-height: 120%;
         resize: none;
+        width: 100%;
         height: 80px;
     }
 
@@ -1063,17 +1100,6 @@
         height: 80px;
     }
 
-    .form-group-textarea textarea {
-        font-family: var(--font-evolventa), Arial, Helvetica, sans-serif;
-        background: var(--white-color);
-        color: rgba(255, 255, 255, 0.50);
-        font-size: var(--font-size-15);
-        line-height: 120%;  
-        width: 100%;
-        background: transparent;
-        border: none;
-        padding: 0;
-    }
 
     .form-group-textarea textarea::placeholder {
         font-family: var(--font-evolventa), Arial, Helvetica, sans-serif;
@@ -1085,6 +1111,13 @@
     /* Footer */
     .footer {
         padding: 40px 0 80px 0;
+    }
+
+    .footer__accordion-body-text {
+        font-size: var(--font-size-16);
+        color: var(--black-color);
+        font-weight: 400;
+        max-width: 200px;
     }
 
     .footer .wrapper {

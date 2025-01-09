@@ -182,27 +182,36 @@ function initDynamicHoverEffect() {
     const hoverClass = "hovered";
 
     const mapElements = document.querySelectorAll("[id^='mapsImg']");
-    if (!mapElements.length) return;
+    if (!mapElements.length) {
+        console.warn("No map elements found!");
+        return;
+    }
 
+   
     mapElements.forEach((element) => {
         element.style.cursor = "pointer";
+        element.dataset.initialFill = element.style.fill || ""; 
+        element.dataset.hovered = "false"; 
     });
 
     const handleHover = (target, action) => {
         if (target.id?.startsWith("mapsImg")) {
             const idNumber = target.id.replace("mapsImg", "");
             const targetElement = document.querySelector(`.${baseClass}${idNumber}`);
+
             if (action === "add") {
                 targetElement?.classList.add(hoverClass);
                 target.style.fill = "#616E46";
+                target.dataset.hovered = "true";
+                console.log(`Hover added to ${target.id}`);
             } else if (action === "remove") {
                 targetElement?.classList.remove(hoverClass);
-                target.style.fill = "";
+                target.style.fill = target.dataset.initialFill;
+                target.dataset.hovered = "false";
+                console.log(`Hover removed from ${target.id}`);
             }
         }
     };
-
-
 
     document.addEventListener("click", (event) => {
         if (window.innerWidth < 3200) {
@@ -211,16 +220,19 @@ function initDynamicHoverEffect() {
                 const idNumber = target.id.replace("mapsImg", "");
                 const targetElement = document.querySelector(`.${baseClass}${idNumber}`);
 
-                document.querySelectorAll(`.${baseClass}`).forEach((el) => {
-                    if (el !== targetElement) el.classList.remove(hoverClass);
+                mapElements.forEach((el) => {
+                    if (el !== target && el.dataset.hovered === "true") {
+                        const relatedElement = document.querySelector(`.${baseClass}${el.id.replace("mapsImg", "")}`);
+                        relatedElement?.classList.remove(hoverClass);
+                        el.style.fill = el.dataset.initialFill; 
+                        el.dataset.hovered = "false";
+                    }
                 });
 
-                if (targetElement?.classList.contains(hoverClass)) {
-                    targetElement.classList.remove(hoverClass);
-                    target.style.fill = "";
+                if (target.dataset.hovered === "true") {
+                    handleHover(target, "remove");
                 } else {
-                    targetElement?.classList.add(hoverClass);
-                    target.style.fill = "#616E46";
+                    handleHover(target, "add");
                 }
             }
         }
